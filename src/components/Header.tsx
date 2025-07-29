@@ -11,8 +11,8 @@ const Header = () => {
   ];
 
   return (
-    <div className="absolute top-0 z-10 flex w-full justify-between p-6">
-      <div className="flex items-center gap-10">
+    <div className="absolute top-0 z-10 hidden w-full justify-between p-6 md:flex">
+      <div className="flex w-full items-center justify-center gap-10 xl:justify-start">
         {headerItems.map((item) => (
           <button
             key={item.id}
