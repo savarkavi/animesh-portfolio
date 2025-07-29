@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono, Zen_Old_Mincho } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
+import MobileMenu from "@/components/MobileMenu";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -29,9 +30,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${zenOldMincho.className} antialiased`}>
-        <div className="relative bg-linear-180 from-[rgba(59,130,246,1)] from-30% via-[#fff6db] via-95%">
+      <body className={`${zenOldMincho.className} p-2 antialiased md:p-4`}>
+        <div className="relative bg-linear-180 from-[rgba(59,130,246,1)] from-10% via-[#fff6db] via-45%">
           <Header />
+          <MobileMenu />
           {children}
         </div>
       </body>
