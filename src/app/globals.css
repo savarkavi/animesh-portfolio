@@ -21,7 +21,14 @@
 
 body {
   background-color: #fff6db;
-  padding: 16px;
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+.noise {
+  filter: contrast(100%) brightness(100%);
+  background:
+    linear-gradient(to right, red, transparent),
+    linear-gradient(to right, rgba(243, 143, 143, 1), transparent),
+    url(/noise.svg);
 }
