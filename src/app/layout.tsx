@@ -31,7 +31,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${zenOldMincho.className} p-2 antialiased md:p-4`}>
-        <div className="relative bg-linear-180 from-[rgba(59,130,246,1)] from-10% via-[#fff6db] via-45%">
+        <div className="relative bg-linear-180 from-[rgba(59,130,246,1)] from-5% via-[#fff6db] via-20%">
           <Header />
           <MobileMenu />
           {children}
