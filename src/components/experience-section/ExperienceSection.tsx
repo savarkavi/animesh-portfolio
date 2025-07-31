@@ -7,14 +7,18 @@ import Experience from "./Experience";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/all";
+import { useMediaQuery } from "usehooks-ts";
 
 gsap.registerPlugin(useGSAP, ScrollTrigger);
 
 const ExperienceSection = () => {
   const [currExpItem, setCurrExpItem] = useState(1);
   const containerRef = useRef<HTMLDivElement>(null);
+  const isMobile = useMediaQuery("(max-width: 1024px)");
 
   useGSAP(() => {
+    if (isMobile) return;
+
     gsap
       .timeline({
         scrollTrigger: {
@@ -53,10 +57,10 @@ const ExperienceSection = () => {
 
   return (
     <div className="min-h-screen">
-      <div className="-rotate-4 border-y border-black bg-white p-2">
+      <div className="-rotate-4 border-y border-black bg-white p-1 lg:p-2">
         <div className="noise flex items-center justify-center rounded-xl px-6 py-4">
           <p
-            className={`${electroharmonix.className} text-7xl font-black tracking-wider`}
+            className={`${electroharmonix.className} text-3xl font-black tracking-wider lg:text-7xl`}
           >
             Experience
           </p>
