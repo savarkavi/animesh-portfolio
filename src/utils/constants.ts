@@ -1,7 +1,7 @@
 export const experienceData = [
   {
     type: "Fulltime",
-    title: "Gully Gang",
+    title: "Graphic design / illustration",
     description:
       "Working as a visual and digital artist handling video editing, animation, and creative direction for music releases and promotional content.",
     time: "2024 - present",
@@ -10,7 +10,7 @@ export const experienceData = [
   },
   {
     type: "Freelance",
-    title: "Video visualizers and concept arts",
+    title: "Video editor",
     description:
       "Created animated visualizers and conceptual artwork for Sony India, filtr and other brands and independent artists.",
     time: "2021 - 2024",
@@ -25,5 +25,143 @@ export const experienceData = [
     time: "2022 - 2024",
     imgOneSrc: "/video-editing-img1.webp",
     imgTwoSrc: "/video-editing-img2.heic",
+  },
+];
+
+export const featuredWorkData = [
+  {
+    label: "",
+    imgSrc: "/featured-work-img1.heic",
+  },
+  {
+    label: "",
+    imgSrc: "/featured-work-img2.webp",
+  },
+  {
+    label: "",
+    imgSrc: "/featured-work-img3.webp",
+  },
+  {
+    label: "",
+    imgSrc: "/featured-work-img4.heic",
+  },
+  {
+    label: "",
+    imgSrc: "/featured-work-img5.jpg",
+  },
+  {
+    label: "",
+    imgSrc: "/featured-work-img6.heic",
+  },
+];
+
+export const footerLinks = [
+  {
+    label: "Address",
+    content: "Shimla, Himachal Pradesh",
+  },
+  {
+    label: "Mail",
+    content: "animesh_sesnsie@gmailcom",
+  },
+  {
+    label: "Phone",
+    content: "9840771756",
+  },
+  {
+    label: "Instagram",
+    content: "@animesh_sesnsie",
+  },
+  {
+    label: "Youtube",
+    content: "@animesh_sesnsie_youtube",
+  },
+];
+
+export const headerItems = [
+  { id: 1, label: "Home" },
+  { id: 2, label: "Works" },
+  { id: 3, label: "About" },
+  { id: 4, label: "Contact" },
+];
+
+export const brandsData = [
+  {
+    label: "Sasin productions",
+    src: "/brand-img-1.png",
+  },
+  {
+    label: "Sony music",
+    src: "/brand-img-2.png",
+  },
+  {
+    label: "Garuudaa music",
+    src: "/brand-img-3.png",
+  },
+  {
+    label: "Pearl",
+    src: "/brand-img-4.png",
+  },
+  {
+    label: "5.5 records",
+    src: "/brand-img-5.png",
+  },
+  {
+    label: "Filtr",
+    src: "/brand-img-6.png",
+  },
+  {
+    label: "Gully gang",
+    src: "/brand-img-7.png",
+  },
+];
+
+export const workExperienceData = [
+  {
+    company: "Sony Music Entertainment",
+    role: "Video Editor / Animator",
+    type: "Freelance",
+    description:
+      "I worked with the product marketing department to conceptualize and execute animations and editing of music videos for artists like Mitraz and Harjas Harjayee.",
+    imgSrc: "/sony-music-img.webp",
+  },
+  {
+    company: "Garudda Music",
+    role: "Video Editor / Animator",
+    type: "Freelance",
+    description:
+      "Designed a diverse array if multimedia, including captivating lyric videos, instagram reels and animations.",
+    imgSrc: "/garuudaa-music-img.jpg",
+  },
+  {
+    company: "Gully Gang",
+    role: "Illustrator",
+    type: "Freelance",
+    description:
+      "I crafted an animated loop and an album artwork for the for a song.",
+    imgSrc: "/gully-gang-img1.webp",
+  },
+  {
+    company: "Pearl Records",
+    role: "Graphic Designer",
+    type: "Freelance",
+    description:
+      "Designed a visual identity for a song comprising an album cover, a youtube thumbnail and a cohesive youtube banner.",
+    imgSrc: "/gully-gang-img1.webp",
+  },
+  {
+    company: "Sasin Productions",
+    role: "Graphic Designer / Animator",
+    type: "Freelance",
+    description: "Designed an animation loop and an album artwork for a song.",
+    imgSrc: "/gully-gang-img1.webp",
+  },
+  {
+    company: "Filtr India",
+    role: "Illustrator",
+    type: "Freelance",
+    description:
+      "I drew a series of illustrations for music playlist covers, each a unique reflection of the musical journey it represents.",
+    imgSrc: "/gully-gang-img1.webp",
   },
 ];
