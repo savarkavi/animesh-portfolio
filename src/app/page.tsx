@@ -13,10 +13,10 @@ export const nuku = localFont({
 
 export default function Home() {
   return (
-    <div className="min-h-screen overflow-hidden">
+    <div className="z-10 min-h-screen overflow-hidden">
       <Hero />
-      {/* <FeaturedWorkSection /> */}
       <ExperienceContainer />
+      <FeaturedWorkSection />
       <div className="h-screen"></div>
     </div>
   );
