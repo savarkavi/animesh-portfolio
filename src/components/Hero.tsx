@@ -14,19 +14,21 @@ const Hero = () => {
   useGSAP(() => {
     gsap.to(".hero-sub-text", { opacity: 1, x: 0, duration: 1 });
     gsap.to(".hero-about-text", { opacity: 1, y: 0, duration: 1 });
+    gsap.to(".animesh-logo", {
+      rotateZ: 360,
+      repeat: -1,
+      ease: "none",
+      duration: 4,
+    });
   });
 
   return (
-    <div className="relative min-h-screen w-full xl:flex">
+    <div className="relative min-h-screen w-full bg-[#fff6db] bg-gradient-to-b from-[#3b82f6] from-20% via-[#fff6db] via-80% xl:flex">
       <div className="mt-16 flex flex-col items-center gap-6 p-8 md:mt-30 lg:mt-36 xl:mt-20 2xl:mt-36 2xl:gap-12">
         <div className={`flex flex-col items-center gap-4 xl:items-start`}>
           <div className="flex flex-col items-center justify-start overflow-hidden xl:items-start 2xl:flex-row 2xl:gap-12">
             <TextAnimationWrapper
-              text="Animesh"
-              className={`${nuku.className} text-8xl uppercase lg:text-9xl 2xl:text-[10rem] 2xl:leading-40`}
-            />
-            <TextAnimationWrapper
-              text="Sharma"
+              text="Animesh Sharma"
               className={`${nuku.className} text-8xl uppercase lg:text-9xl 2xl:text-[10rem] 2xl:leading-40`}
             />
           </div>
@@ -51,7 +53,7 @@ const Hero = () => {
             aesthetics, I aim to create visuals that connect, inspire, and
             provoke thought.
           </p>
-          <div className="absolute -top-8 -right-4 h-[70px] w-[70px] rounded-full">
+          <div className="animesh-logo absolute -top-8 -right-4 h-[70px] w-[70px] rounded-full">
             <Image
               src="/animesh-logo.jpg"
               alt="logo"
