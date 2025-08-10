@@ -25,10 +25,6 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
-.noise {
-  filter: contrast(100%) brightness(100%);
-  background:
-    linear-gradient(to right, rgb(255, 42, 42), transparent),
-    linear-gradient(to right, rgba(243, 143, 143, 1), transparent),
-    url(/noise.svg);
+.outline-text {
+  -webkit-text-stroke: 1px rgb(30, 132, 233);
 }
