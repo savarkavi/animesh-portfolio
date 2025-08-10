@@ -30,51 +30,69 @@ export const experienceData = [
 
 export const featuredWorkData = [
   {
-    label: "",
+    label: "Better call saul",
     imgSrc: "/featured-work-img1.heic",
   },
   {
-    label: "",
+    label: "Lucci Cucci",
     imgSrc: "/featured-work-img2.webp",
   },
   {
-    label: "",
+    label: "Gully locker",
     imgSrc: "/featured-work-img3.webp",
   },
   {
-    label: "",
+    label: "Sun mirror",
     imgSrc: "/featured-work-img4.heic",
   },
   {
-    label: "",
+    label: "Centipede",
     imgSrc: "/featured-work-img5.jpg",
   },
   {
-    label: "",
+    label: "Chain saw man",
     imgSrc: "/featured-work-img6.heic",
+  },
+  {
+    label: "The eyes",
+    imgSrc: "/featured-work-img7.heic",
+  },
+  {
+    label: "Prison break",
+    imgSrc: "/featured-work-img8.heic",
+  },
+  {
+    label: "Gear 5 luffy",
+    imgSrc: "/featured-work-img9.jpeg",
   },
 ];
 
 export const footerLinks = [
   {
-    label: "Address",
-    content: "Shimla, Himachal Pradesh",
+    label: "social-links",
+    items: [
+      {
+        name: "Instagram",
+        content: "@animesh_sesnsie",
+      },
+      {
+        name: "Youtube",
+        content: "@animesh_sesnsie_youtube",
+      },
+    ],
   },
   {
-    label: "Mail",
-    content: "animesh_sesnsie@gmailcom",
-  },
-  {
-    label: "Phone",
-    content: "9840771756",
-  },
-  {
-    label: "Instagram",
-    content: "@animesh_sesnsie",
-  },
-  {
-    label: "Youtube",
-    content: "@animesh_sesnsie_youtube",
+    label: "contact-links",
+    items: [
+      {
+        name: "Mail",
+        content: "animesh_sesnsie@gmailcom",
+      },
+      {
+        name: "Phone",
+        content: "9840771756",
+      },
+    ],
   },
 ];
 
