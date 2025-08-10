@@ -3,6 +3,9 @@ import { Geist, Geist_Mono, Zen_Old_Mincho } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
 import MobileMenu from "@/components/MobileMenu";
+import Footer from "@/components/Footer";
+import Image from "next/image";
+import ReactLenis, { useLenis } from "lenis/react";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -30,13 +33,25 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${zenOldMincho.className} p-2 antialiased md:p-4`}>
-        <div className="relative bg-linear-180 from-[rgba(59,130,246,1)] from-5% via-[#fff6db] via-20%">
-          <Header />
-          <MobileMenu />
-          {children}
-        </div>
-      </body>
+      <ReactLenis root>
+        <body className={`${zenOldMincho.className} antialiased`}>
+          <div
+            className="fixed top-0 left-0 z-[999] h-screen w-screen"
+            style={{
+              backgroundImage: "url('/grainy-effect.webp')",
+              mixBlendMode: "hard-light",
+              opacity: 0.06,
+              pointerEvents: "none",
+            }}
+          ></div>
+          <div className="relative z-[99]">
+            <Header />
+            <MobileMenu />
+            {children}
+          </div>
+          <Footer />
+        </body>
+      </ReactLenis>
     </html>
   );
 }
