@@ -28,10 +28,19 @@ const TextAnimationWrapper: React.FC<AnimatedTextProps> = ({
           onComplete: onComplete,
         })
         .to(".text-letter", {
-          y: 0,
+          y: -30,
           duration: 0.5,
           stagger: 0.1,
-        });
+        })
+        .to(
+          ".text-letter",
+          {
+            y: 0,
+            duration: 0.5,
+            stagger: 0.1,
+          },
+          "-=1.2",
+        );
     },
     { scope: textRef },
   );
