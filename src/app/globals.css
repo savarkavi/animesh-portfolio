@@ -28,3 +28,9 @@ body {
 .outline-text {
   -webkit-text-stroke: 1px rgb(30, 132, 233);
 }
+
+@media (min-width: 1280px) {
+  .outline-text {
+    -webkit-text-stroke: 2px rgb(30, 132, 233);
+  }
+}
