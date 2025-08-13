@@ -1,6 +1,6 @@
 "use client";
 
-import { electroharmonix } from "@/app/layout";
+import { electroharmonix } from "@/app/fonts/fonts";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import React, { useRef } from "react";

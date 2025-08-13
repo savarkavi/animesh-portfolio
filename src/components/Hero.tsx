@@ -1,6 +1,6 @@
 "use client";
 
-import { nuku } from "@/app/layout";
+import { nuku } from "@/app/fonts/fonts";
 import React from "react";
 import { GiPolarStar } from "react-icons/gi";
 import TextAnimationWrapper from "./TextAnimationWrapper";
