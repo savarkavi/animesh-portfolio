@@ -2,8 +2,8 @@ import { featuredWorkData } from "@/utils/constants";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/all";
-import Image from "next/image";
 import { useRef } from "react";
+import PreloadImage from "../PreloadImage";
 
 gsap.registerPlugin(useGSAP, ScrollTrigger);
 
@@ -53,14 +53,14 @@ const FeaturedWorkSlider = () => {
             }}
             className="absolute flex h-full items-center"
           >
-            <Image
+            <PreloadImage
               src={item.imgSrc}
               alt={item.label}
               height={600}
               width={550}
               className="object-contain"
             />
-            <p className="absolute -top-12 left-4 text-4xl">{item.label}</p>
+            <p className="absolute -top-12 left-0 text-4xl">{item.label}</p>
           </div>
         ))}
       </div>

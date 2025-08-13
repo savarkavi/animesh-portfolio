@@ -2,8 +2,8 @@ import { brandsData } from "@/utils/constants";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/all";
-import Image from "next/image";
 import React, { useRef } from "react";
+import PreloadImage from "../PreloadImage";
 
 gsap.registerPlugin(useGSAP, ScrollTrigger);
 
@@ -40,7 +40,7 @@ const BrandsContainer = () => {
             key={item.label}
             className={`relative border border-gray-500 ${i === brandsData.length - 1 ? "col-span-2 h-[250px] xl:h-[200px] 2xl:h-[250px]" : "h-[200px] xl:h-[150px] 2xl:h-[200px]"}`}
           >
-            <Image
+            <PreloadImage
               src={item.src}
               alt="brand-image"
               fill

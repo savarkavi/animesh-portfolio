@@ -1,26 +1,31 @@
 "use client";
 
 import { electroharmonix, nuku } from "@/app/page";
-import Image from "next/image";
 import React from "react";
 import { GiPolarStar } from "react-icons/gi";
 import TextAnimationWrapper from "./TextAnimationWrapper";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
+import { useMediaLoading } from "@/context/MediaLoadingContext";
+import PreloadImage from "./PreloadImage";
 
 gsap.registerPlugin(useGSAP);
 
 const Hero = () => {
+  const { isOverlayAnimComplete } = useMediaLoading();
+
   useGSAP(() => {
-    gsap.to(".hero-sub-text", { opacity: 1, x: 0, duration: 1 });
-    gsap.to(".hero-about-text", { opacity: 1, y: 0, duration: 1 });
-    gsap.to(".animesh-logo", {
-      rotateZ: 360,
-      repeat: -1,
-      ease: "none",
-      duration: 4,
-    });
-  });
+    if (isOverlayAnimComplete) {
+      gsap.to(".hero-sub-text", { opacity: 1, x: 0, duration: 1 });
+      gsap.to(".hero-about-text", { opacity: 1, y: 0, duration: 1 });
+      gsap.to(".animesh-logo", {
+        rotateZ: 360,
+        repeat: -1,
+        ease: "none",
+        duration: 4,
+      });
+    }
+  }, [isOverlayAnimComplete]);
 
   return (
     <div className="relative min-h-screen w-full bg-[#fff6db] bg-gradient-to-b from-[#3b82f6] from-20% via-[#fff6db] via-80% xl:flex">
@@ -54,7 +59,7 @@ const Hero = () => {
             provoke thought.
           </p>
           <div className="animesh-logo absolute -top-8 -right-4 h-[70px] w-[70px] rounded-full">
-            <Image
+            <PreloadImage
               src="/animesh-logo.jpg"
               alt="logo"
               fill
@@ -64,7 +69,7 @@ const Hero = () => {
         </div>
       </div>
       <div className="absolute top-0 right-0 hidden h-full w-[680px] xl:block">
-        <Image
+        <PreloadImage
           src="/animesh-portrait.png"
           alt="image"
           fill

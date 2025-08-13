@@ -3,6 +3,7 @@
 import React, { useRef } from "react";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
+import { useMediaLoading } from "@/context/MediaLoadingContext";
 
 interface AnimatedTextProps {
   text: string;
@@ -16,33 +17,36 @@ const TextAnimationWrapper: React.FC<AnimatedTextProps> = ({
   onComplete,
 }) => {
   const textRef = useRef<HTMLParagraphElement>(null);
+  const { isOverlayAnimComplete } = useMediaLoading();
 
   useGSAP(
     () => {
-      gsap
-        .timeline({
-          scrollTrigger: {
-            trigger: textRef.current,
-            start: "top 95%",
-          },
-          onComplete: onComplete,
-        })
-        .to(".text-letter", {
-          y: -30,
-          duration: 0.5,
-          stagger: 0.1,
-        })
-        .to(
-          ".text-letter",
-          {
-            y: 0,
+      if (isOverlayAnimComplete) {
+        gsap
+          .timeline({
+            scrollTrigger: {
+              trigger: textRef.current,
+              start: "top 95%",
+            },
+            onComplete: onComplete,
+          })
+          .to(".text-letter", {
+            y: -30,
             duration: 0.5,
             stagger: 0.1,
-          },
-          "-=1.2",
-        );
+          })
+          .to(
+            ".text-letter",
+            {
+              y: 0,
+              duration: 0.5,
+              stagger: 0.1,
+            },
+            "-=1.2",
+          );
+      }
     },
-    { scope: textRef },
+    { scope: textRef, dependencies: [isOverlayAnimComplete] },
   );
 
   return (
