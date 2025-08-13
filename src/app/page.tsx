@@ -11,7 +11,7 @@ export const nuku = localFont({
   src: "../app/fonts/nuku1.ttf",
 });
 
-export default function Home() {
+const Home = () => {
   return (
     <div className="z-10 min-h-screen overflow-hidden">
       <Hero />
@@ -20,4 +20,6 @@ export default function Home() {
       <div className="h-screen"></div>
     </div>
   );
-}
+};
+
+export default Home;
