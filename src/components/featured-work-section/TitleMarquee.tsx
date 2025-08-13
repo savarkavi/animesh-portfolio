@@ -44,7 +44,7 @@ const TitleMarquee = () => {
       </div>
       <div
         ref={featuredTitleRightContainerRef}
-        className="outline-text flex w-max -translate-x-[50%] text-[2.4rem] font-bold tracking-wider text-nowrap text-transparent uppercase sm:text-6xl md:text-7xl lg:text-8xl xl:text-[7.8rem] 2xl:text-[11.7rem]"
+        className="outline-text flex w-max -translate-x-[50%] text-[2.4rem] font-bold tracking-wider text-nowrap text-transparent uppercase opacity-50 sm:text-6xl md:text-7xl lg:text-8xl xl:text-[7.8rem] 2xl:text-[11.7rem]"
       >
         <div className="w-screen">
           <p className="sm:leading-20 lg:leading-28 xl:leading-32 2xl:leading-48">
