@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useRef } from "react";
+import React from "react";
 import ExperienceRibbon from "./ExperienceRibbon";
 import BrandsContainer from "./BrandsContainer";
 import WorkExperienceContainer from "./WorkExperienceContainer";

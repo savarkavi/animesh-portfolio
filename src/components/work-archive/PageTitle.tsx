@@ -3,7 +3,7 @@
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/all";
-import React, { useRef, useState } from "react";
+import React, { useRef } from "react";
 
 gsap.registerPlugin(useGSAP, ScrollTrigger);
 
@@ -62,12 +62,12 @@ const PageTitle = () => {
           >
             <div className={"w-full md:w-screen"}>
               <p className="outline-text scale-y-150 text-transparent">
-                Welcome to Animesh's
+                Welcome to Animesh&apos;s
               </p>
             </div>
             <div className={"w-full md:w-screen"}>
               <p className="outline-text scale-y-150 text-transparent">
-                Welcome to Animesh's
+                Welcome to Animesh&apos;s
               </p>
             </div>
           </div>

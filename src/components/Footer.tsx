@@ -1,6 +1,6 @@
 "use client";
 
-import { footerLinks, headerItems } from "@/utils/constants";
+import { footerLinks } from "@/utils/constants";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import Image from "next/image";

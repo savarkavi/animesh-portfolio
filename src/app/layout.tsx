@@ -1,22 +1,12 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono, Zen_Old_Mincho } from "next/font/google";
+import { Zen_Old_Mincho } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
 import MobileMenu from "@/components/MobileMenu";
 import Footer from "@/components/Footer";
-import ReactLenis, { useLenis } from "lenis/react";
+import ReactLenis from "lenis/react";
 import IntroOverlay from "@/components/IntroOverlay";
 import { MediaLoadingProvider } from "@/context/MediaLoadingContext";
-
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
 
 export const zenOldMincho = Zen_Old_Mincho({
   subsets: ["latin"],

@@ -34,6 +34,7 @@ const PreloadImage = (props: ImageProps) => {
 
   useImageLoader(imageSrc);
 
+  // eslint-disable-next-line jsx-a11y/alt-text
   return <Image {...props} />;
 };
 

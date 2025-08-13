@@ -14,8 +14,7 @@ const CategoryMedia = () => {
 
   useGSAP(
     () => {
-      const media: HTMLDivElement[] = gsap.utils.toArray(".category-media");
-
+      // const media: HTMLDivElement[] = gsap.utils.toArray(".category-media");
       // media.forEach((item, i) => {
       //   gsap.to(item, {
       //     y: -500,

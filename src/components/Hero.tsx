@@ -1,6 +1,6 @@
 "use client";
 
-import { electroharmonix, nuku } from "@/app/page";
+import { nuku } from "@/app/page";
 import React from "react";
 import { GiPolarStar } from "react-icons/gi";
 import TextAnimationWrapper from "./TextAnimationWrapper";
@@ -53,7 +53,7 @@ const Hero = () => {
             Hi! I’m a digital artist passionate about bringing imagination to
             life through pixels and color. My work blends creativity with
             storytelling, capturing emotion and atmosphere in every
-            piece—whether it's character design, concept art, or surreal
+            piece—whether it&apos;s character design, concept art, or surreal
             landscapes. Inspired by both the natural world and futuristic
             aesthetics, I aim to create visuals that connect, inspire, and
             provoke thought.
