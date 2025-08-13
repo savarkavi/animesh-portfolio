@@ -4,8 +4,9 @@ import "./globals.css";
 import Header from "@/components/Header";
 import MobileMenu from "@/components/MobileMenu";
 import Footer from "@/components/Footer";
-import Image from "next/image";
 import ReactLenis, { useLenis } from "lenis/react";
+import IntroOverlay from "@/components/IntroOverlay";
+import { MediaLoadingProvider } from "@/context/MediaLoadingContext";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -33,25 +34,28 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <ReactLenis root>
-        <body className={`${zenOldMincho.className} antialiased`}>
-          <div
-            className="fixed top-0 left-0 z-[999] h-screen w-screen"
-            style={{
-              backgroundImage: "url('/grainy-effect.webp')",
-              mixBlendMode: "hard-light",
-              opacity: 0.06,
-              pointerEvents: "none",
-            }}
-          ></div>
-          <div className="relative z-[99]">
-            <Header />
-            <MobileMenu />
-            {children}
-          </div>
-          <Footer />
-        </body>
-      </ReactLenis>
+      <MediaLoadingProvider>
+        <ReactLenis root>
+          <body className={`${zenOldMincho.className} antialiased`}>
+            <IntroOverlay />
+            <div
+              className="fixed top-0 left-0 z-[999] h-screen w-screen"
+              style={{
+                backgroundImage: "url('/grainy-effect.webp')",
+                mixBlendMode: "hard-light",
+                opacity: 0.06,
+                pointerEvents: "none",
+              }}
+            ></div>
+            <div className="relative z-[90]">
+              <Header />
+              <MobileMenu />
+              {children}
+            </div>
+            <Footer />
+          </body>
+        </ReactLenis>
+      </MediaLoadingProvider>
     </html>
   );
 }
