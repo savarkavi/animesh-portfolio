@@ -1,33 +1,3 @@
-export const experienceData = [
-  {
-    type: "Fulltime",
-    title: "Graphic design / illustration",
-    description:
-      "Working as a visual and digital artist handling video editing, animation, and creative direction for music releases and promotional content.",
-    time: "2024 - present",
-    imgOneSrc: "/gully-gang-img1.webp",
-    imgTwoSrc: "/gully-gang-img2.webp",
-  },
-  {
-    type: "Freelance",
-    title: "Video editor",
-    description:
-      "Created animated visualizers and conceptual artwork for Sony India, filtr and other brands and independent artists.",
-    time: "2021 - 2024",
-    imgOneSrc: "/video-visualizer-img1.jpg",
-    imgTwoSrc: "/video-visualizer-img2.webp",
-  },
-  {
-    type: "Freelance",
-    title: "Video editing and mixing",
-    description:
-      "Provided post-production services including video editing, color grading, and sound mixing for music videos and promotional content.",
-    time: "2022 - 2024",
-    imgOneSrc: "/video-editing-img1.webp",
-    imgTwoSrc: "/video-editing-img2.heic",
-  },
-];
-
 export const featuredWorkData = [
   {
     label: "Better call saul",
@@ -97,10 +67,10 @@ export const footerLinks = [
 ];
 
 export const headerItems = [
-  { id: 1, label: "Home" },
-  { id: 2, label: "Works" },
-  { id: 3, label: "About" },
-  { id: 4, label: "Contact" },
+  { id: 1, label: "Home", link: "/" },
+  { id: 2, label: "Works", link: "/work-archive" },
+  { id: 3, label: "Gallery", link: "/gallery" },
+  { id: 4, label: "Contact", link: "/contact" },
 ];
 
 export const brandsData = [
@@ -181,5 +151,80 @@ export const workExperienceData = [
     description:
       "I drew a series of illustrations for music playlist covers, each a unique reflection of the musical journey it represents.",
     imgSrc: "/gully-gang-img1.webp",
+  },
+];
+
+export const workCategoriesData = [
+  {
+    label: "Poster design",
+    img: "/poster-design-img.heic",
+  },
+  {
+    label: "Album art",
+    img: "/album-art-img.jpg",
+  },
+  {
+    label: "Gully fest 2024",
+    img: "/gully-fest-img.webp",
+  },
+  {
+    label: "Music visualizer",
+    img: "/music-visualizer-img.jpeg",
+  },
+  {
+    label: "2D animation",
+    img: "/featured-work-img1.heic",
+  },
+  {
+    label: "Fan Art",
+    img: "/fan-art-img.heic",
+  },
+  {
+    label: "Logo design",
+    img: "/branding-logo-img.jpeg",
+  },
+  {
+    label: "Y2k nazar stickers",
+    img: "/y2k-nazar-stickers-img.webp",
+  },
+  {
+    label: "Digital portraits",
+    img: "/digital-portrait-img.jpeg",
+  },
+  {
+    label: "Typography",
+    img: "/typography-img.webp",
+  },
+];
+
+export const posterDesignsImages = [
+  {
+    label: "McGill and Wexler",
+    src: "/featured-work-img8.heic",
+  },
+  {
+    label: "Better call saul",
+
+    src: "/featured-work-img1.heic",
+  },
+  {
+    label: "The boys",
+
+    src: "/the-boys-img.heic",
+  },
+  {
+    label: "Tarzan the wonder car",
+
+    src: "/poster-design-img.heic",
+  },
+  {
+    label: "Bike rider",
+
+    src: "/bike-rider-1.webp",
+  },
+  {
+    label: "Mountain peak",
+
+    src: "/bike-rider-2.webp",
   },
 ];
