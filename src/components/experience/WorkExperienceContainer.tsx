@@ -18,28 +18,28 @@ const WorkExperienceContainer = () => {
   );
 
   useGSAP(() => {
-    if (isMobile) return;
-
-    gsap.timeline({
-      scrollTrigger: {
-        trigger: ".work-experience-container",
-        start: "3.5% top",
-        end: "bottom bottom",
-        pin: ".brands-container",
-        scrub: 1,
-      },
-    });
-    gsap
-      .timeline({
+    if (!isMobile) {
+      gsap.timeline({
         scrollTrigger: {
           trigger: ".work-experience-container",
-          start: "top top",
+          start: "3.5% top",
           end: "bottom bottom",
+          pin: ".brands-container",
           scrub: 1,
         },
-      })
-      .to(".scroll-progress .star", { visibility: "visible", duration: 0.1 })
-      .to(".scroll-progress", { height: "100%", ease: "none" }, "<");
+      });
+      gsap
+        .timeline({
+          scrollTrigger: {
+            trigger: ".work-experience-container",
+            start: "top top",
+            end: "bottom bottom",
+            scrub: 1,
+          },
+        })
+        .to(".scroll-progress .star", { visibility: "visible", duration: 0.1 })
+        .to(".scroll-progress", { height: "100%", ease: "none" }, "<");
+    }
 
     const experienceTitles = gsap.utils.toArray(".experience-title");
 

@@ -42,7 +42,7 @@ const FeaturedWorkSection = () => {
     >
       <TitleMarquee />
       <div className="featured-work-content h-full w-full">
-        <div className="wavy-svg relative h-[320px] w-full">
+        <div className="wavy-svg relative h-[200px] w-full xl:h-[320px]">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 1440 320"

@@ -14,27 +14,54 @@ const FeaturedWorkSlider = () => {
   const radius = 1000;
   const itemAngle = 360 / featuredWorkData.length;
 
-  useGSAP(() => {
-    imagesRef.current.forEach((el, i) => {
-      gsap.set(el, {
-        rotationY: i * itemAngle,
-        transformOrigin: `50% 50% ${-radius}px`,
-        transformPerspective: 2000,
+  useGSAP(
+    () => {
+      imagesRef.current.forEach((el, i) => {
+        gsap.set(el, {
+          rotationY: i * itemAngle,
+          transformOrigin: `50% 50% ${-radius}px`,
+          transformPerspective: 2000,
+        });
       });
-    });
 
-    gsap.to(imagesRef.current, {
-      rotationY: `+=${360}`,
-      ease: "none",
-      scrollTrigger: {
-        trigger: containerRef.current,
-        start: "top top",
-        end: `+=${featuredWorkData.length * 500}`,
-        scrub: true,
-        pin: true,
-      },
-    });
-  });
+      gsap.to(imagesRef.current, {
+        rotationY: `+=${360}`,
+        ease: "none",
+        scrollTrigger: {
+          trigger: containerRef.current,
+          start: "top top",
+          end: `+=${featuredWorkData.length * 500}`,
+          scrub: true,
+          pin: true,
+          onUpdate: () => {
+            imagesRef.current.forEach((el) => {
+              const currentRotation = gsap.getProperty(
+                el,
+                "rotationY",
+              ) as number;
+
+              const normalizedAngle = Math.abs(currentRotation % 360);
+
+              const distanceFromFront = Math.min(
+                normalizedAngle,
+                360 - normalizedAngle,
+              );
+
+              const newOpacity = gsap.utils.mapRange(
+                0,
+                180,
+                1,
+                0.3,
+              )(distanceFromFront);
+
+              gsap.set(el, { opacity: newOpacity });
+            });
+          },
+        },
+      });
+    },
+    { scope: containerRef },
+  );
 
   return (
     <div

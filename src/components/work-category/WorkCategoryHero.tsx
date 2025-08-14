@@ -15,9 +15,9 @@ interface WorkCategoryHeroProps {
 
 const WorkCategoryHero = ({ category }: WorkCategoryHeroProps) => {
   return (
-    <div className="flex h-screen overflow-hidden bg-red-500">
+    <div className="flex h-dvh overflow-hidden bg-red-500">
       <div
-        className={`relative flex h-full w-full items-center justify-center uppercase`}
+        className={`relative flex h-full w-full items-center justify-between uppercase`}
       >
         <div className="flex items-center justify-center gap-2 px-4 text-3xl uppercase sm:text-5xl xl:flex-[60%] 2xl:text-[11rem]">
           <p className={`w-full text-center leading-50 text-white uppercase`}>
