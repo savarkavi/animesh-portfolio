@@ -1,7 +1,7 @@
 import localFont from "next/font/local";
 
 export const electroharmonix = localFont({
-  src: "./fonts/Electroharmonix.otf",
+  src: "./Electroharmonix.otf",
   variable: "--font-electroharmonix",
 });
 

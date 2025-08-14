@@ -85,7 +85,7 @@ const Page = () => {
               }}
             >
               <PreloadImage
-                src={item.img}
+                src={item.coverImg}
                 alt="category image"
                 fill
                 className="object-cover"

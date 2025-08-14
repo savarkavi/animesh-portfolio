@@ -157,74 +157,339 @@ export const workExperienceData = [
 export const workCategoriesData = [
   {
     label: "Poster design",
-    img: "/poster-design-img.heic",
+    coverImg:
+      "https://wpyy1h42p2.ufs.sh/f/ieAAD0sTR7aJiaUKz5sTR7aJpkACO4dE8NUxy1D3LHnciYIV",
+    media: [
+      {
+        label: "McGill and Wexler",
+        src: "https://wpyy1h42p2.ufs.sh/f/ieAAD0sTR7aJiaUKz5sTR7aJpkACO4dE8NUxy1D3LHnciYIV",
+      },
+      {
+        label: "Better call saul",
+        src: "https://wpyy1h42p2.ufs.sh/f/ieAAD0sTR7aJkEbyz30NVkY9ZQ1drp2yGL3IRv8D64KanJgB",
+      },
+      {
+        label: "The boys",
+        src: "https://wpyy1h42p2.ufs.sh/f/ieAAD0sTR7aJClRF06Krzo1f8s5FtT9MaHYe6PXn7B2dpkNq",
+      },
+      {
+        label: "Tarzan the wonder car",
+        src: "https://wpyy1h42p2.ufs.sh/f/ieAAD0sTR7aJYEXOLlG4Cw3mRAl9XpPaOt2Jbe5rcE7HBixW",
+      },
+      {
+        label: "Bike rider",
+        src: "https://wpyy1h42p2.ufs.sh/f/ieAAD0sTR7aJSU3C2TtY9xg2WEAquZnKOP1GmTVUvwLphMRH",
+      },
+      {
+        label: "Mountain peak",
+        src: "https://wpyy1h42p2.ufs.sh/f/ieAAD0sTR7aJsmGqu8h3AVSagd7tm8xcB6yNWznYpUP9LRrf",
+      },
+    ],
   },
   {
     label: "Album art",
-    img: "/album-art-img.jpg",
+    coverImg: "/album-art-img.jpg",
+    media: [
+      {
+        label: "Sun mirror",
+        src: "https://wpyy1h42p2.ufs.sh/f/ieAAD0sTR7aJaDDkRJNbu9q58M7NpWmUTdGYfs3jlAVi0CtQ",
+      },
+      {
+        label: "Reversion",
+        src: "https://wpyy1h42p2.ufs.sh/f/ieAAD0sTR7aJPQk2cEBFjrcEBJKn6Z9I2eoH5dGQhyNmDMw0",
+      },
+      {
+        label: "Marzi album",
+        src: "https://wpyy1h42p2.ufs.sh/f/ieAAD0sTR7aJNxsJaL97gbnoU2RW8x01PQY6ht4BryZpmdOw",
+      },
+      {
+        label: "Janneya album",
+        src: "https://wpyy1h42p2.ufs.sh/f/ieAAD0sTR7aJkcRGRF0NVkY9ZQ1drp2yGL3IRv8D64KanJgB",
+      },
+      {
+        label: "Lofi hits",
+        src: "https://wpyy1h42p2.ufs.sh/f/ieAAD0sTR7aJQFyZfm86guYzrwSToPGIetL3y5fqWVxiXk0N",
+      },
+      {
+        label: "Lonely kid",
+        src: "https://wpyy1h42p2.ufs.sh/f/ieAAD0sTR7aJpo78UKkUfvgWFaYhxDsj8G7ZHQlTLcK2d1eB",
+      },
+      {
+        label: "Indie lofie",
+        src: "https://wpyy1h42p2.ufs.sh/f/ieAAD0sTR7aJJnOm2Nb0o2Y7RjkVi9ZChD1dqAsbMITFK3Px",
+      },
+    ],
   },
   {
     label: "Gully fest 2024",
-    img: "/gully-fest-img.webp",
+    coverImg: "/gully-fest-img.webp",
+    media: [
+      {
+        label: "Sun mirror",
+        src: "https://wpyy1h42p2.ufs.sh/f/ieAAD0sTR7aJaDDkRJNbu9q58M7NpWmUTdGYfs3jlAVi0CtQ",
+      },
+      {
+        label: "Reversion",
+        src: "https://wpyy1h42p2.ufs.sh/f/ieAAD0sTR7aJPQk2cEBFjrcEBJKn6Z9I2eoH5dGQhyNmDMw0",
+      },
+      {
+        label: "Marzi album",
+        src: "https://wpyy1h42p2.ufs.sh/f/ieAAD0sTR7aJNxsJaL97gbnoU2RW8x01PQY6ht4BryZpmdOw",
+      },
+      {
+        label: "Janneya album",
+        src: "https://wpyy1h42p2.ufs.sh/f/ieAAD0sTR7aJkcRGRF0NVkY9ZQ1drp2yGL3IRv8D64KanJgB",
+      },
+      {
+        label: "Lofi hits",
+        src: "https://wpyy1h42p2.ufs.sh/f/ieAAD0sTR7aJQFyZfm86guYzrwSToPGIetL3y5fqWVxiXk0N",
+      },
+      {
+        label: "Lonely kid",
+        src: "https://wpyy1h42p2.ufs.sh/f/ieAAD0sTR7aJpo78UKkUfvgWFaYhxDsj8G7ZHQlTLcK2d1eB",
+      },
+      {
+        label: "Indie lofie",
+        src: "https://wpyy1h42p2.ufs.sh/f/ieAAD0sTR7aJJnOm2Nb0o2Y7RjkVi9ZChD1dqAsbMITFK3Px",
+      },
+    ],
   },
   {
     label: "Music visualizer",
-    img: "/music-visualizer-img.jpeg",
+    coverImg: "/music-visualizer-img.jpeg",
+    media: [
+      {
+        label: "Sun mirror",
+        src: "https://wpyy1h42p2.ufs.sh/f/ieAAD0sTR7aJaDDkRJNbu9q58M7NpWmUTdGYfs3jlAVi0CtQ",
+      },
+      {
+        label: "Reversion",
+        src: "https://wpyy1h42p2.ufs.sh/f/ieAAD0sTR7aJPQk2cEBFjrcEBJKn6Z9I2eoH5dGQhyNmDMw0",
+      },
+      {
+        label: "Marzi album",
+        src: "https://wpyy1h42p2.ufs.sh/f/ieAAD0sTR7aJNxsJaL97gbnoU2RW8x01PQY6ht4BryZpmdOw",
+      },
+      {
+        label: "Janneya album",
+        src: "https://wpyy1h42p2.ufs.sh/f/ieAAD0sTR7aJkcRGRF0NVkY9ZQ1drp2yGL3IRv8D64KanJgB",
+      },
+      {
+        label: "Lofi hits",
+        src: "https://wpyy1h42p2.ufs.sh/f/ieAAD0sTR7aJQFyZfm86guYzrwSToPGIetL3y5fqWVxiXk0N",
+      },
+      {
+        label: "Lonely kid",
+        src: "https://wpyy1h42p2.ufs.sh/f/ieAAD0sTR7aJpo78UKkUfvgWFaYhxDsj8G7ZHQlTLcK2d1eB",
+      },
+      {
+        label: "Indie lofie",
+        src: "https://wpyy1h42p2.ufs.sh/f/ieAAD0sTR7aJJnOm2Nb0o2Y7RjkVi9ZChD1dqAsbMITFK3Px",
+      },
+    ],
   },
   {
     label: "2D animation",
-    img: "/featured-work-img1.heic",
+    coverImg: "/featured-work-img1.heic",
+    media: [
+      {
+        label: "Sun mirror",
+        src: "https://wpyy1h42p2.ufs.sh/f/ieAAD0sTR7aJaDDkRJNbu9q58M7NpWmUTdGYfs3jlAVi0CtQ",
+      },
+      {
+        label: "Reversion",
+        src: "https://wpyy1h42p2.ufs.sh/f/ieAAD0sTR7aJPQk2cEBFjrcEBJKn6Z9I2eoH5dGQhyNmDMw0",
+      },
+      {
+        label: "Marzi album",
+        src: "https://wpyy1h42p2.ufs.sh/f/ieAAD0sTR7aJNxsJaL97gbnoU2RW8x01PQY6ht4BryZpmdOw",
+      },
+      {
+        label: "Janneya album",
+        src: "https://wpyy1h42p2.ufs.sh/f/ieAAD0sTR7aJkcRGRF0NVkY9ZQ1drp2yGL3IRv8D64KanJgB",
+      },
+      {
+        label: "Lofi hits",
+        src: "https://wpyy1h42p2.ufs.sh/f/ieAAD0sTR7aJQFyZfm86guYzrwSToPGIetL3y5fqWVxiXk0N",
+      },
+      {
+        label: "Lonely kid",
+        src: "https://wpyy1h42p2.ufs.sh/f/ieAAD0sTR7aJpo78UKkUfvgWFaYhxDsj8G7ZHQlTLcK2d1eB",
+      },
+      {
+        label: "Indie lofie",
+        src: "https://wpyy1h42p2.ufs.sh/f/ieAAD0sTR7aJJnOm2Nb0o2Y7RjkVi9ZChD1dqAsbMITFK3Px",
+      },
+    ],
   },
   {
     label: "Fan Art",
-    img: "/fan-art-img.heic",
+    coverImg: "/fan-art-img.heic",
+    media: [
+      {
+        label: "Sun mirror",
+        src: "https://wpyy1h42p2.ufs.sh/f/ieAAD0sTR7aJaDDkRJNbu9q58M7NpWmUTdGYfs3jlAVi0CtQ",
+      },
+      {
+        label: "Reversion",
+        src: "https://wpyy1h42p2.ufs.sh/f/ieAAD0sTR7aJPQk2cEBFjrcEBJKn6Z9I2eoH5dGQhyNmDMw0",
+      },
+      {
+        label: "Marzi album",
+        src: "https://wpyy1h42p2.ufs.sh/f/ieAAD0sTR7aJNxsJaL97gbnoU2RW8x01PQY6ht4BryZpmdOw",
+      },
+      {
+        label: "Janneya album",
+        src: "https://wpyy1h42p2.ufs.sh/f/ieAAD0sTR7aJkcRGRF0NVkY9ZQ1drp2yGL3IRv8D64KanJgB",
+      },
+      {
+        label: "Lofi hits",
+        src: "https://wpyy1h42p2.ufs.sh/f/ieAAD0sTR7aJQFyZfm86guYzrwSToPGIetL3y5fqWVxiXk0N",
+      },
+      {
+        label: "Lonely kid",
+        src: "https://wpyy1h42p2.ufs.sh/f/ieAAD0sTR7aJpo78UKkUfvgWFaYhxDsj8G7ZHQlTLcK2d1eB",
+      },
+      {
+        label: "Indie lofie",
+        src: "https://wpyy1h42p2.ufs.sh/f/ieAAD0sTR7aJJnOm2Nb0o2Y7RjkVi9ZChD1dqAsbMITFK3Px",
+      },
+    ],
   },
   {
     label: "Logo design",
-    img: "/branding-logo-img.jpeg",
+    coverImg: "/branding-logo-img.jpeg",
+    media: [
+      {
+        label: "Sun mirror",
+        src: "https://wpyy1h42p2.ufs.sh/f/ieAAD0sTR7aJaDDkRJNbu9q58M7NpWmUTdGYfs3jlAVi0CtQ",
+      },
+      {
+        label: "Reversion",
+        src: "https://wpyy1h42p2.ufs.sh/f/ieAAD0sTR7aJPQk2cEBFjrcEBJKn6Z9I2eoH5dGQhyNmDMw0",
+      },
+      {
+        label: "Marzi album",
+        src: "https://wpyy1h42p2.ufs.sh/f/ieAAD0sTR7aJNxsJaL97gbnoU2RW8x01PQY6ht4BryZpmdOw",
+      },
+      {
+        label: "Janneya album",
+        src: "https://wpyy1h42p2.ufs.sh/f/ieAAD0sTR7aJkcRGRF0NVkY9ZQ1drp2yGL3IRv8D64KanJgB",
+      },
+      {
+        label: "Lofi hits",
+        src: "https://wpyy1h42p2.ufs.sh/f/ieAAD0sTR7aJQFyZfm86guYzrwSToPGIetL3y5fqWVxiXk0N",
+      },
+      {
+        label: "Lonely kid",
+        src: "https://wpyy1h42p2.ufs.sh/f/ieAAD0sTR7aJpo78UKkUfvgWFaYhxDsj8G7ZHQlTLcK2d1eB",
+      },
+      {
+        label: "Indie lofie",
+        src: "https://wpyy1h42p2.ufs.sh/f/ieAAD0sTR7aJJnOm2Nb0o2Y7RjkVi9ZChD1dqAsbMITFK3Px",
+      },
+    ],
   },
   {
     label: "Y2k nazar stickers",
-    img: "/y2k-nazar-stickers-img.webp",
+    coverImg: "/y2k-nazar-stickers-img.webp",
+    media: [
+      {
+        label: "Sun mirror",
+        src: "https://wpyy1h42p2.ufs.sh/f/ieAAD0sTR7aJaDDkRJNbu9q58M7NpWmUTdGYfs3jlAVi0CtQ",
+      },
+      {
+        label: "Reversion",
+        src: "https://wpyy1h42p2.ufs.sh/f/ieAAD0sTR7aJPQk2cEBFjrcEBJKn6Z9I2eoH5dGQhyNmDMw0",
+      },
+      {
+        label: "Marzi album",
+        src: "https://wpyy1h42p2.ufs.sh/f/ieAAD0sTR7aJNxsJaL97gbnoU2RW8x01PQY6ht4BryZpmdOw",
+      },
+      {
+        label: "Janneya album",
+        src: "https://wpyy1h42p2.ufs.sh/f/ieAAD0sTR7aJkcRGRF0NVkY9ZQ1drp2yGL3IRv8D64KanJgB",
+      },
+      {
+        label: "Lofi hits",
+        src: "https://wpyy1h42p2.ufs.sh/f/ieAAD0sTR7aJQFyZfm86guYzrwSToPGIetL3y5fqWVxiXk0N",
+      },
+      {
+        label: "Lonely kid",
+        src: "https://wpyy1h42p2.ufs.sh/f/ieAAD0sTR7aJpo78UKkUfvgWFaYhxDsj8G7ZHQlTLcK2d1eB",
+      },
+      {
+        label: "Indie lofie",
+        src: "https://wpyy1h42p2.ufs.sh/f/ieAAD0sTR7aJJnOm2Nb0o2Y7RjkVi9ZChD1dqAsbMITFK3Px",
+      },
+    ],
   },
   {
     label: "Digital portraits",
-    img: "/digital-portrait-img.jpeg",
+    coverImg: "/digital-portrait-img.jpeg",
+    media: [
+      {
+        label: "Sun mirror",
+        src: "https://wpyy1h42p2.ufs.sh/f/ieAAD0sTR7aJaDDkRJNbu9q58M7NpWmUTdGYfs3jlAVi0CtQ",
+      },
+      {
+        label: "Reversion",
+        src: "https://wpyy1h42p2.ufs.sh/f/ieAAD0sTR7aJPQk2cEBFjrcEBJKn6Z9I2eoH5dGQhyNmDMw0",
+      },
+      {
+        label: "Marzi album",
+        src: "https://wpyy1h42p2.ufs.sh/f/ieAAD0sTR7aJNxsJaL97gbnoU2RW8x01PQY6ht4BryZpmdOw",
+      },
+      {
+        label: "Janneya album",
+        src: "https://wpyy1h42p2.ufs.sh/f/ieAAD0sTR7aJkcRGRF0NVkY9ZQ1drp2yGL3IRv8D64KanJgB",
+      },
+      {
+        label: "Lofi hits",
+        src: "https://wpyy1h42p2.ufs.sh/f/ieAAD0sTR7aJQFyZfm86guYzrwSToPGIetL3y5fqWVxiXk0N",
+      },
+      {
+        label: "Lonely kid",
+        src: "https://wpyy1h42p2.ufs.sh/f/ieAAD0sTR7aJpo78UKkUfvgWFaYhxDsj8G7ZHQlTLcK2d1eB",
+      },
+      {
+        label: "Indie lofie",
+        src: "https://wpyy1h42p2.ufs.sh/f/ieAAD0sTR7aJJnOm2Nb0o2Y7RjkVi9ZChD1dqAsbMITFK3Px",
+      },
+    ],
   },
   {
     label: "Typography",
-    img: "/typography-img.webp",
-  },
-];
-
-export const posterDesignsImages = [
-  {
-    label: "McGill and Wexler",
-    src: "/featured-work-img8.heic",
-  },
-  {
-    label: "Better call saul",
-
-    src: "/featured-work-img1.heic",
-  },
-  {
-    label: "The boys",
-
-    src: "/the-boys-img.heic",
-  },
-  {
-    label: "Tarzan the wonder car",
-
-    src: "/poster-design-img.heic",
-  },
-  {
-    label: "Bike rider",
-
-    src: "/bike-rider-1.webp",
-  },
-  {
-    label: "Mountain peak",
-
-    src: "/bike-rider-2.webp",
+    coverImg: "/typography-img.webp",
+    media: [
+      {
+        label: "Sun mirror",
+        src: "https://wpyy1h42p2.ufs.sh/f/ieAAD0sTR7aJaDDkRJNbu9q58M7NpWmUTdGYfs3jlAVi0CtQ",
+      },
+      {
+        label: "Reversion",
+        src: "https://wpyy1h42p2.ufs.sh/f/ieAAD0sTR7aJPQk2cEBFjrcEBJKn6Z9I2eoH5dGQhyNmDMw0",
+      },
+      {
+        label: "Marzi album",
+        src: "https://wpyy1h42p2.ufs.sh/f/ieAAD0sTR7aJNxsJaL97gbnoU2RW8x01PQY6ht4BryZpmdOw",
+      },
+      {
+        label: "Janneya album",
+        src: "https://wpyy1h42p2.ufs.sh/f/ieAAD0sTR7aJkcRGRF0NVkY9ZQ1drp2yGL3IRv8D64KanJgB",
+      },
+      {
+        label: "Lofi hits",
+        src: "https://wpyy1h42p2.ufs.sh/f/ieAAD0sTR7aJQFyZfm86guYzrwSToPGIetL3y5fqWVxiXk0N",
+      },
+      {
+        label: "Lonely kid",
+        src: "https://wpyy1h42p2.ufs.sh/f/ieAAD0sTR7aJpo78UKkUfvgWFaYhxDsj8G7ZHQlTLcK2d1eB",
+      },
+      {
+        label: "Indie lofie",
+        src: "https://wpyy1h42p2.ufs.sh/f/ieAAD0sTR7aJJnOm2Nb0o2Y7RjkVi9ZChD1dqAsbMITFK3Px",
+      },
+    ],
   },
 ];
