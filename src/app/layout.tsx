@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Zen_Old_Mincho } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
-import MobileMenu from "@/components/MobileMenu";
+// import MobileMenu from "@/components/MobileMenu";
 import Footer from "@/components/Footer";
 import ReactLenis from "lenis/react";
 import IntroOverlay from "@/components/IntroOverlay";
@@ -39,7 +39,7 @@ export default function RootLayout({
             ></div>
             <div className="relative z-[90]">
               <Header />
-              <MobileMenu />
+              {/* <MobileMenu /> */}
               {children}
             </div>
             <Footer />

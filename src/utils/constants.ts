@@ -70,7 +70,7 @@ export const headerItems = [
   { id: 1, label: "Home", link: "/" },
   { id: 2, label: "Works", link: "/work-archive" },
   { id: 3, label: "Gallery", link: "/gallery" },
-  { id: 4, label: "Contact", link: "/contact" },
+  // { id: 4, label: "Contact", link: "/contact" },
 ];
 
 export const brandsData = [

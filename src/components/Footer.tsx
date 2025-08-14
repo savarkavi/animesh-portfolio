@@ -17,7 +17,7 @@ const Footer = () => {
   });
 
   return (
-    <div className="fixed top-0 left-0 flex h-screen w-full justify-center bg-black bg-[linear-gradient(135deg,_rgba(70,69,73,0.7),_rgba(0,0,0,1)_64%)] xl:justify-between">
+    <div className="fixed top-0 left-0 flex h-screen w-full justify-center bg-black bg-[linear-gradient(135deg,_rgba(70,69,73,0.7),_rgba(0,0,0,1)_64%)] text-white xl:justify-between">
       <div className="absolute mt-24 flex flex-1 flex-col p-4 xl:mt-0 xl:pl-12 2xl:py-16">
         <p className="text-7xl uppercase md:text-8xl xl:text-[12rem]">
           Animesh
