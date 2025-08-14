@@ -19,10 +19,8 @@ const WorkCategoryHero = ({ category }: WorkCategoryHeroProps) => {
       <div
         className={`relative flex h-full w-full items-center justify-center uppercase`}
       >
-        <div className="flex items-center justify-center gap-2 px-4 text-3xl uppercase sm:text-5xl xl:flex-[60%] 2xl:text-[12rem]">
-          <p
-            className={`w-full max-w-[800px] text-center leading-50 break-all hyphens-auto text-white uppercase`}
-          >
+        <div className="flex items-center justify-center gap-2 px-4 text-3xl uppercase sm:text-5xl xl:flex-[60%] 2xl:text-[11rem]">
+          <p className={`w-full text-center leading-50 text-white uppercase`}>
             {category.label.split("-").join(" ")}
           </p>
         </div>

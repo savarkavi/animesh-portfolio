@@ -29,12 +29,14 @@ const Hero = () => {
 
   return (
     <div className="relative min-h-screen w-full bg-[#fff6db] bg-gradient-to-b from-[#3b82f6] from-20% via-[#fff6db] via-80% xl:flex">
-      <div className="mt-16 flex flex-col items-center gap-6 p-8 md:mt-30 lg:mt-36 xl:mt-20 2xl:mt-36 2xl:gap-12">
-        <div className={`flex flex-col items-center gap-4 xl:items-start`}>
+      <div className="flex flex-col items-center gap-6 p-8 xl:mt-20 xl:items-start 2xl:mt-36 2xl:gap-12">
+        <div
+          className={`flex flex-col items-center gap-4 text-white xl:items-start`}
+        >
           <div className="flex flex-col items-center justify-start overflow-hidden xl:items-start 2xl:flex-row 2xl:gap-12">
             <TextAnimationWrapper
               text="Animesh Sharma"
-              className={`${nuku.className} text-8xl uppercase lg:text-9xl 2xl:text-[10rem] 2xl:leading-40`}
+              className={`${nuku.className} mt-8 text-8xl uppercase md:mt-20 lg:text-9xl xl:mt-0 2xl:text-[10rem] 2xl:leading-40`}
             />
           </div>
           <p className="hero-sub-text -translate-x-50 font-black uppercase opacity-0 2xl:text-4xl">
