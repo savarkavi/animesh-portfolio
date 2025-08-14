@@ -29,14 +29,18 @@ const Hero = () => {
 
   return (
     <div className="relative min-h-screen w-full bg-[#fff6db] bg-gradient-to-b from-[#3b82f6] from-20% via-[#fff6db] via-80% xl:flex">
-      <div className="flex flex-col items-center gap-6 p-8 xl:mt-20 xl:items-start 2xl:mt-36 2xl:gap-12">
+      <div className="flex flex-col items-center gap-6 p-4 xl:mt-20 xl:items-start 2xl:mt-36 2xl:gap-12">
         <div
-          className={`flex flex-col items-center gap-4 text-white xl:items-start`}
+          className={`mt-20 flex flex-col items-center gap-4 text-white md:mt-30 xl:items-start`}
         >
-          <div className="flex flex-col items-center justify-start overflow-hidden xl:items-start 2xl:flex-row 2xl:gap-12">
+          <div className="flex flex-col items-center justify-start overflow-hidden text-center xl:items-start 2xl:flex-row 2xl:gap-12">
             <TextAnimationWrapper
-              text="Animesh Sharma"
-              className={`${nuku.className} mt-8 text-8xl uppercase md:mt-20 lg:text-9xl xl:mt-0 2xl:text-[10rem] 2xl:leading-40`}
+              text="Animesh"
+              className={`${nuku.className} mt-8 text-8xl uppercase lg:text-9xl xl:mt-0 2xl:text-[10rem] 2xl:leading-40`}
+            />
+            <TextAnimationWrapper
+              text="Sharma"
+              className={`${nuku.className} text-8xl uppercase lg:text-9xl xl:mt-0 2xl:text-[10rem] 2xl:leading-40`}
             />
           </div>
           <p className="hero-sub-text -translate-x-50 font-black uppercase opacity-0 2xl:text-4xl">

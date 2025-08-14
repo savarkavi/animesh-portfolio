@@ -60,7 +60,9 @@ const FeaturedWorkSlider = () => {
               width={550}
               className="object-contain"
             />
-            <p className="absolute -top-12 left-0 text-4xl">{item.label}</p>
+            <p className="absolute -top-12 left-0 p-4 text-3xl md:text-4xl">
+              {item.label}
+            </p>
           </div>
         ))}
       </div>
