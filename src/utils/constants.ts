@@ -69,7 +69,7 @@ export const footerLinks = [
 export const headerItems = [
   { id: 1, label: "Home", link: "/" },
   { id: 2, label: "Works", link: "/work-archive" },
-  { id: 3, label: "Gallery", link: "/gallery" },
+  { id: 3, label: "About", link: "/about" },
   // { id: 4, label: "Contact", link: "/contact" },
 ];
 

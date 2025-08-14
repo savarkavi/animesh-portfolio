@@ -66,7 +66,7 @@ const FeaturedWorkSlider = () => {
   return (
     <div
       ref={containerRef}
-      className="featured-work-slider-container relative -mt-1 flex h-screen w-full items-center justify-center overflow-hidden bg-[#0099ff]"
+      className="featured-work-slider-container relative -mt-1 flex h-screen w-full items-end justify-center overflow-hidden bg-[#0099ff]"
     >
       <div
         className="featured-work-images-container relative flex h-[600px] w-full items-center justify-center 2xl:h-[700px]"
