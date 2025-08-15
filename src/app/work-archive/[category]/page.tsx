@@ -16,7 +16,6 @@ const Page = async ({ params }: { params: Promise<{ category: string }> }) => {
     <div className="min-h-screen">
       <WorkCategoryHero category={currentCategory} />
       <CategoryMedia media={currentCategory.media} />
-      <div className="h-screen"></div>
     </div>
   );
 };

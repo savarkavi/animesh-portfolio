@@ -94,7 +94,6 @@ const Page = () => {
           </div>
         ))}
       </div>
-      <div className="h-screen bg-transparent"></div>
     </div>
   );
 };
