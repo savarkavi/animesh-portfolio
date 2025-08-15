@@ -1,9 +1,10 @@
 "use client";
 
-import { footerLinks } from "@/utils/constants";
+import { socialLinks } from "@/utils/constants";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 
 gsap.registerPlugin(useGSAP);
@@ -17,7 +18,7 @@ const Footer = () => {
   });
 
   return (
-    <div className="fixed top-0 left-0 flex h-screen w-full justify-center bg-black bg-[linear-gradient(135deg,_rgba(70,69,73,0.7),_rgba(0,0,0,1)_64%)] text-white xl:justify-between">
+    <div className="fixed top-0 left-0 z-[90] flex h-screen w-full justify-center bg-black bg-[linear-gradient(135deg,_rgba(70,69,73,0.7),_rgba(0,0,0,1)_64%)] text-white xl:justify-between">
       <div className="absolute mt-24 flex flex-1 flex-col p-4 xl:mt-0 xl:pl-12 2xl:py-16">
         <p className="text-7xl uppercase md:text-8xl xl:text-[12rem]">
           Animesh
@@ -41,13 +42,19 @@ const Footer = () => {
           </div>
         </div>
         <div className="mt-16 flex justify-between text-sm uppercase">
-          {footerLinks.map((item) => (
-            <div key={item.label} className="flex items-center gap-8">
-              {item.items.map((item, i) => (
-                <p key={i}>{item.name}</p>
-              ))}
-            </div>
-          ))}
+          <div className="flex flex-col gap-8 tracking-wide">
+            <p className="text-2xl text-gray-400">Socials</p>
+            {socialLinks.map((item, i) => (
+              <Link href={item.link} key={i}>
+                {item.name}
+              </Link>
+            ))}
+          </div>
+          <div className="flex flex-col gap-8 tracking-wide">
+            <p className="text-2xl text-gray-400">Contact</p>
+            <p>Mail: animesh_sesnsie@gmail.com</p>
+            <p>Phone: 9840771756</p>
+          </div>
         </div>
       </div>
       <p className="absolute bottom-6 left-4 z-10 uppercase 2xl:left-16">

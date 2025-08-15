@@ -41,32 +41,21 @@ export const featuredWorkData = [
   },
 ];
 
-export const footerLinks = [
+export const socialLinks = [
   {
-    label: "social-links",
-    items: [
-      {
-        name: "Instagram",
-        content: "@animesh_sesnsie",
-      },
-      {
-        name: "Youtube",
-        content: "@animesh_sesnsie_youtube",
-      },
-    ],
+    name: "Instagram",
+    content: "@animesh_sesnsie",
+    link: "https://www.instagram.com/animesh_sensei",
   },
   {
-    label: "contact-links",
-    items: [
-      {
-        name: "Mail",
-        content: "animesh_sesnsie@gmailcom",
-      },
-      {
-        name: "Phone",
-        content: "9840771756",
-      },
-    ],
+    name: "Youtube",
+    content: "@animesh_sesnsie",
+    link: "/",
+  },
+  {
+    name: "Behance",
+    content: "@animesh_sesnsie",
+    link: "https://behance.net/animeshsharma5",
   },
 ];
 
