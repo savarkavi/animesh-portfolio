@@ -34,14 +34,18 @@ const Hero = () => {
           className={`mt-20 flex flex-col items-center gap-4 text-white md:mt-30 xl:mt-20 xl:items-start 2xl:items-center`}
         >
           <div className="flex flex-col items-center justify-start overflow-hidden text-center xl:items-start 2xl:flex-row 2xl:gap-12">
-            <TextAnimationWrapper
-              text="Animesh"
-              className={`${nuku.className} mt-8 text-8xl uppercase lg:text-9xl xl:mt-0 2xl:text-[10rem] 2xl:leading-40`}
-            />
-            <TextAnimationWrapper
-              text="Sharma"
-              className={`${nuku.className} text-8xl uppercase lg:text-9xl xl:mt-0 2xl:text-[10rem] 2xl:leading-40`}
-            />
+            <div className="overflow-hidden">
+              <TextAnimationWrapper
+                text="Animesh"
+                className={`${nuku.className} mt-8 text-8xl uppercase lg:text-9xl xl:mt-0 2xl:text-[10rem] 2xl:leading-40`}
+              />
+            </div>
+            <div className="overflow-hidden">
+              <TextAnimationWrapper
+                text="Sharma"
+                className={`${nuku.className} text-8xl uppercase lg:text-9xl xl:mt-0 2xl:text-[10rem] 2xl:leading-40`}
+              />
+            </div>
           </div>
           <p className="hero-sub-text -translate-x-50 font-black uppercase opacity-0 2xl:text-4xl">
             Digital Artist / illustrator

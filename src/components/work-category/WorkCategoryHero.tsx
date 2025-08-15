@@ -20,7 +20,7 @@ const WorkCategoryHero = ({ category }: WorkCategoryHeroProps) => {
       <div
         className={`relative flex h-full w-full flex-[60%] items-center justify-between uppercase`}
       >
-        <div className="flex w-full flex-wrap items-center justify-center gap-2 overflow-hidden px-4 text-3xl uppercase sm:text-6xl 2xl:text-9xl">
+        <div className="relative w-full px-4 text-3xl uppercase sm:text-6xl 2xl:text-9xl">
           <TextAnimationWrapper
             text={category.label.split("-").join(" ")}
             className="w-full text-center leading-16 text-white uppercase sm:leading-20 xl:leading-36"

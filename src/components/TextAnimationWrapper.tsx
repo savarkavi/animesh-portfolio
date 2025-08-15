@@ -31,19 +31,10 @@ const TextAnimationWrapper: React.FC<AnimatedTextProps> = ({
             onComplete: onComplete,
           })
           .to(".text-letter", {
-            y: -20,
+            y: 0,
             duration: 0.5,
             stagger: 0.1,
-          })
-          .to(
-            ".text-letter",
-            {
-              y: 0,
-              duration: 0.5,
-              stagger: 0.1,
-            },
-            "-=1.2",
-          );
+          });
       }
     },
     { scope: textRef, dependencies: [isOverlayAnimComplete] },
@@ -53,11 +44,11 @@ const TextAnimationWrapper: React.FC<AnimatedTextProps> = ({
     <p ref={textRef} className={className}>
       {text.split(" ").map((word, wi) => (
         <React.Fragment key={wi}>
-          <span className="inline-block">
+          <span className="relative inline-block overflow-hidden">
             {word.split("").map((l, i) => (
               <span
                 key={`${wi}-${i}`}
-                className="text-letter inline-block translate-y-100"
+                className="text-letter relative inline-block translate-y-50"
               >
                 {l}
               </span>
