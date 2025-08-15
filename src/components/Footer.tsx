@@ -41,23 +41,27 @@ const Footer = () => {
             />
           </div>
         </div>
-        <div className="mt-16 flex justify-between text-sm uppercase">
-          <div className="flex flex-col gap-8 tracking-wide">
+        <div className="mt-12 flex justify-between gap-8 text-sm uppercase xl:mt-16">
+          <div className="flex flex-col items-center gap-8 text-[12px] tracking-wide">
             <p className="text-2xl text-gray-400">Socials</p>
             {socialLinks.map((item, i) => (
-              <LinkHoverUnderline href={item.link} key={i} className="w-fit">
+              <LinkHoverUnderline
+                href={item.link}
+                key={i}
+                className="w-fit md:text-base"
+              >
                 {item.name}
               </LinkHoverUnderline>
             ))}
           </div>
-          <div className="flex flex-col gap-8 tracking-wide">
-            <p className="text-2xl text-gray-400">Contact</p>
-            <p>Mail: animesh_sesnsie@gmail.com</p>
-            <p>Phone: 9840771756</p>
+          <div className="flex flex-col items-center gap-8 text-[12px] tracking-wide">
+            <p className="text-center text-2xl text-gray-400">Contact</p>
+            <p className="md:text-base">animesh_sesnsie@gmail.com</p>
+            <p className="md:text-base">9840771756</p>
           </div>
         </div>
       </div>
-      <p className="absolute bottom-6 left-4 z-10 uppercase 2xl:left-12">
+      <p className="absolute bottom-4 left-4 z-10 uppercase 2xl:left-12">
         © Copyright Animesh
       </p>
       <div className="absolute right-0 bottom-0 h-[500px] w-full sm:h-[600px] sm:w-[500px] xl:w-[600px] 2xl:h-[800px] 2xl:w-[800px]">
