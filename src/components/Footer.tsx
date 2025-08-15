@@ -4,8 +4,8 @@ import { socialLinks } from "@/utils/constants";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import Image from "next/image";
-import Link from "next/link";
 import React from "react";
+import LinkHoverUnderline from "./LinkHoverUnderline";
 
 gsap.registerPlugin(useGSAP);
 
@@ -45,9 +45,9 @@ const Footer = () => {
           <div className="flex flex-col gap-8 tracking-wide">
             <p className="text-2xl text-gray-400">Socials</p>
             {socialLinks.map((item, i) => (
-              <Link href={item.link} key={i}>
+              <LinkHoverUnderline href={item.link} key={i} className="w-fit">
                 {item.name}
-              </Link>
+              </LinkHoverUnderline>
             ))}
           </div>
           <div className="flex flex-col gap-8 tracking-wide">
@@ -57,7 +57,7 @@ const Footer = () => {
           </div>
         </div>
       </div>
-      <p className="absolute bottom-6 left-4 z-10 uppercase 2xl:left-16">
+      <p className="absolute bottom-6 left-4 z-10 uppercase 2xl:left-12">
         © Copyright Animesh
       </p>
       <div className="absolute right-0 bottom-0 h-[500px] w-full sm:h-[600px] sm:w-[500px] xl:w-[600px] 2xl:h-[800px] 2xl:w-[800px]">

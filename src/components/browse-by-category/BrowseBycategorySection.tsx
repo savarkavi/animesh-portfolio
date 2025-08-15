@@ -1,7 +1,7 @@
 import React from "react";
 import TextAnimationWrapper from "../TextAnimationWrapper";
 import CategoriesContainer from "./CategoriesContainer";
-import Link from "next/link";
+import LinkHoverUnderline from "../LinkHoverUnderline";
 
 const BrowseBycategorySection = () => {
   return (
@@ -11,9 +11,12 @@ const BrowseBycategorySection = () => {
           text="Browse categories"
           className="text-center text-4xl uppercase xl:text-7xl"
         />
-        <Link href="/work-archive" className="text-base uppercase md:text-xl">
+        <LinkHoverUnderline
+          href="/work-archive"
+          className="text-base uppercase md:text-xl"
+        >
           Explore All
-        </Link>
+        </LinkHoverUnderline>
       </div>
       <CategoriesContainer />
     </div>
