@@ -24,12 +24,13 @@ const Hero = () => {
         ease: "none",
         duration: 4,
       });
+      gsap.to(".animesh-portrait", { opacity: 1, y: 0, duration: 1 });
     }
   }, [isOverlayAnimComplete]);
 
   return (
     <div className="relative min-h-screen w-full bg-[#fff6db] bg-gradient-to-b from-[#3b82f6] from-20% via-[#fff6db] via-80% xl:flex">
-      <div className="flex flex-col items-center gap-6 p-4 xl:mt-20 xl:items-start xl:p-8 2xl:mt-30 2xl:items-center 2xl:gap-12">
+      <div className="flex flex-col items-center gap-6 p-4 xl:mt-20 xl:items-start xl:p-8 2xl:mt-24 2xl:items-center 2xl:gap-12">
         <div
           className={`mt-20 flex flex-col items-center gap-4 text-white md:mt-30 xl:mt-20 xl:items-start 2xl:items-center`}
         >
@@ -80,10 +81,10 @@ const Hero = () => {
       </div>
       <div className="absolute top-0 right-0 hidden h-full w-[680px] xl:block">
         <PreloadImage
-          src="/animesh-portrait.png"
+          src="/ani-portrait.png"
           alt="image"
           fill
-          className="object-cover"
+          className="animesh-portrait translate-y-30 object-cover opacity-0"
         />
       </div>
     </div>
