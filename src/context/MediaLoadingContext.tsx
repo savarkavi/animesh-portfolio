@@ -43,7 +43,7 @@ export const MediaLoadingProvider = ({ children }: { children: ReactNode }) => {
   const progress = totalMedia > 0 ? (loadedMedia / totalMedia) * 100 : 0;
 
   useEffect(() => {
-    if (loadedMedia === totalMedia && totalMedia > 0) {
+    if (loadedMedia === totalMedia) {
       setTimeout(() => {
         setAllLoaded(true);
       }, 1000);
