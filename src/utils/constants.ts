@@ -35,6 +35,10 @@ export const featuredWorkData = [
     label: "Gear 5 luffy",
     imgSrc: "/featured-work-img9.jpeg",
   },
+  {
+    label: "Urban poet",
+    imgSrc: "/featured-work-img10.jpg",
+  },
 ];
 
 export const footerLinks = [
@@ -69,8 +73,8 @@ export const footerLinks = [
 export const headerItems = [
   { id: 1, label: "Home", link: "/" },
   { id: 2, label: "Works", link: "/work-archive" },
-  { id: 3, label: "About", link: "/about" },
-  // { id: 4, label: "Contact", link: "/contact" },
+  // { id: 3, label: "About", link: "/about" },
+  { id: 4, label: "Contact", link: "/contact" },
 ];
 
 export const brandsData = [
@@ -156,7 +160,7 @@ export const workExperienceData = [
 
 export const workCategoriesData = [
   {
-    label: "Poster design",
+    label: "Poster designs",
     coverImg:
       "https://wpyy1h42p2.ufs.sh/f/ieAAD0sTR7aJiaUKz5sTR7aJpkACO4dE8NUxy1D3LHnciYIV",
     media: [
@@ -491,5 +495,23 @@ export const workCategoriesData = [
         src: "https://wpyy1h42p2.ufs.sh/f/ieAAD0sTR7aJJnOm2Nb0o2Y7RjkVi9ZChD1dqAsbMITFK3Px",
       },
     ],
+  },
+];
+
+export const browseCategoriesData = [
+  {
+    label: "Poster designs",
+    img: "/featured-work-img4.heic",
+    link: "/work-archive/poster-designs",
+  },
+  {
+    label: "Fan art",
+    img: "/fan-art-img.heic",
+    link: "/work-archive/fan-art",
+  },
+  {
+    label: "Digital portraits",
+    img: "/digital-portrait-img.jpeg",
+    link: "/work-archive/digital-portraits",
   },
 ];
