@@ -1,5 +1,6 @@
 "use client";
 
+import { useMediaLoading } from "@/context/MediaLoadingContext";
 import { headerItems } from "@/utils/constants";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
@@ -9,12 +10,16 @@ import React from "react";
 gsap.registerPlugin(useGSAP);
 
 const Header = () => {
+  const { isOverlayAnimComplete } = useMediaLoading();
+
   useGSAP(() => {
-    gsap
-      .timeline()
-      .to(".header-btn", { y: 30, stagger: 0.1 })
-      .to(".header-btn", { y: 0, stagger: 0.1 }, "-=0.3");
-  });
+    if (isOverlayAnimComplete) {
+      gsap
+        .timeline()
+        .to(".header-btn", { y: 30, stagger: 0.1 })
+        .to(".header-btn", { y: 0, stagger: 0.1 }, "-=0.3");
+    }
+  }, [isOverlayAnimComplete]);
 
   return (
     <div className="absolute top-0 z-10 flex h-[80px] w-full justify-between p-6">

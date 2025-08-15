@@ -57,7 +57,7 @@ const IntroOverlay = () => {
   return (
     <div
       ref={overlayContainerRef}
-      className="fixed top-0 left-0 z-[99] flex h-dvh w-full items-center justify-center bg-[#396edd]"
+      className="fixed top-0 left-0 z-[999] flex h-dvh w-full items-center justify-center bg-[#396edd]"
     >
       <div className="animesh-intro-logo relative h-[150px] w-[150px]">
         <Image
