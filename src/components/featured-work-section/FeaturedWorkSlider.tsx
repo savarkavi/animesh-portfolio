@@ -69,13 +69,13 @@ const FeaturedWorkSlider = () => {
                 360 - normalizedAngle,
               );
 
-              // const newOpacity = gsap.utils.mapRange(
-              //   0,
-              //   180,
-              //   1,
-              //   0.3,
-              // )(distanceFromFront);
-              // gsap.set(el, { opacity: newOpacity });
+              const newOpacity = gsap.utils.mapRange(
+                0,
+                180,
+                1,
+                0.3,
+              )(distanceFromFront);
+              gsap.set(el, { opacity: newOpacity });
 
               if (distanceFromFront < minDistance) {
                 minDistance = distanceFromFront;
@@ -129,7 +129,7 @@ const FeaturedWorkSlider = () => {
               width={450}
               className="object-contain"
             />
-            <p className="absolute -top-14 left-0 text-3xl capitalize md:text-4xl">
+            <p className="absolute -top-14 left-0 px-4 text-2xl capitalize md:text-4xl">
               {item.label}
             </p>
           </div>
