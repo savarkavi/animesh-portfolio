@@ -1,6 +1,6 @@
 "use client";
 
-import { nuku } from "@/app/fonts/fonts";
+import { adeDisplay } from "@/app/fonts/fonts";
 import React from "react";
 import { GiPolarStar } from "react-icons/gi";
 import TextAnimationWrapper from "./TextAnimationWrapper";
@@ -34,17 +34,17 @@ const Hero = () => {
         <div
           className={`mt-20 flex flex-col items-center gap-4 text-white md:mt-30 xl:mt-20 xl:items-start 2xl:items-center`}
         >
-          <div className="flex flex-col items-center justify-start overflow-hidden text-center xl:items-start 2xl:flex-row 2xl:gap-12">
+          <div className="flex flex-col items-center justify-start overflow-hidden text-center text-wrap xl:items-start 2xl:flex-row 2xl:gap-12">
             <div className="overflow-hidden">
               <TextAnimationWrapper
                 text="Animesh"
-                className={`${nuku.className} mt-8 text-8xl uppercase lg:text-9xl xl:mt-0 2xl:text-[10rem] 2xl:leading-40`}
+                className={`${adeDisplay.className} mt-8 text-5xl uppercase lg:text-9xl xl:mt-0`}
               />
             </div>
             <div className="overflow-hidden">
               <TextAnimationWrapper
                 text="Sharma"
-                className={`${nuku.className} text-8xl uppercase lg:text-9xl xl:mt-0 2xl:text-[10rem] 2xl:leading-40`}
+                className={`${adeDisplay.className} text-5xl uppercase lg:text-9xl xl:mt-0`}
               />
             </div>
           </div>

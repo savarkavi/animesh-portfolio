@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Zen_Old_Mincho, Averia_Libre } from "next/font/google";
+import { Averia_Libre, Bricolage_Grotesque } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -7,14 +7,14 @@ import ReactLenis from "lenis/react";
 import IntroOverlay from "@/components/IntroOverlay";
 import { MediaLoadingProvider } from "@/context/MediaLoadingContext";
 
-export const zenOldMincho = Zen_Old_Mincho({
-  subsets: ["latin"],
-  weight: ["400", "500", "600", "700", "900"],
-});
-
 export const averiaLibre = Averia_Libre({
   subsets: ["latin"],
   weight: ["300", "400", "700"],
+});
+
+export const bricolage = Bricolage_Grotesque({
+  subsets: ["latin"],
+  weight: ["200", "300", "400", "500", "600", "700"],
 });
 
 export const metadata: Metadata = {
@@ -31,7 +31,7 @@ export default function RootLayout({
     <html lang="en">
       <MediaLoadingProvider>
         <ReactLenis root>
-          <body className={`${zenOldMincho.className} antialiased`}>
+          <body className={`${bricolage.className} antialiased`}>
             <IntroOverlay />
             <div
               className="fixed top-0 left-0 z-[999] h-screen w-screen"

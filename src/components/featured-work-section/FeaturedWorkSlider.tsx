@@ -100,7 +100,7 @@ const FeaturedWorkSlider = () => {
   return (
     <div
       ref={containerRef}
-      className={`featured-work-slider-container relative -mt-1 flex h-screen w-full items-end justify-center overflow-hidden ${activeBgImage ? "bg-black" : "bg-[#0099ff]"}`}
+      className={`featured-work-slider-container relative -mt-1 flex h-screen w-full items-center justify-center overflow-hidden ${activeBgImage ? "bg-black" : "bg-[#0099ff]"}`}
     >
       <div
         style={{
@@ -125,13 +125,10 @@ const FeaturedWorkSlider = () => {
             <PreloadImage
               src={item.imgSrc}
               alt={item.label}
-              height={500}
-              width={450}
+              height={550}
+              width={550}
               className="object-contain"
             />
-            <p className="absolute -top-14 left-0 px-4 text-2xl capitalize md:text-4xl">
-              {item.label}
-            </p>
           </div>
         ))}
       </div>

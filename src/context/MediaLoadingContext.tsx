@@ -40,7 +40,7 @@ export const MediaLoadingProvider = ({ children }: { children: ReactNode }) => {
     setIsOverlayAnimComplete(true);
   }, []);
 
-  const progress = totalMedia > 0 ? (loadedMedia / totalMedia) * 100 : 0;
+  const progress = totalMedia > 0 ? (loadedMedia / totalMedia) * 100 : 100;
 
   useEffect(() => {
     if (loadedMedia === totalMedia) {

@@ -1,5 +1,6 @@
 "use client";
 
+import { zenOldMincho } from "@/app/fonts/fonts";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { useRef } from "react";
@@ -26,7 +27,7 @@ const TitleMarquee = () => {
   });
 
   return (
-    <div className="mt-20 w-full 2xl:mt-40">
+    <div className={`${zenOldMincho.className} mt-20 w-full 2xl:mt-40`}>
       <div
         ref={featuredTitleLeftContainerRef}
         className="flex w-max text-[2.4rem] font-extrabold tracking-wider text-nowrap text-blue-500 uppercase sm:text-6xl md:text-7xl lg:text-8xl xl:text-[7.8rem] 2xl:text-[11.7rem]"
