@@ -5,6 +5,7 @@ import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { Draggable } from "gsap/Draggable";
 import Image from "next/image";
+import { useMediaQuery } from "usehooks-ts";
 
 gsap.registerPlugin(useGSAP, Draggable);
 
@@ -32,8 +33,12 @@ const WorkCategoryContainer = ({ media }: CategoryMediaProps) => {
   const originalPositionsRef = useRef<{
     [key: number]: { x: number; y: number };
   }>({});
+  const isMobile = useMediaQuery("(max-width: 1024px)", {
+    initializeWithValue: false,
+  });
 
   useEffect(() => {
+    if (isMobile) return;
     const SPREAD = 40;
     const calculatedPositions = media.map((item) => {
       const top = Math.random() * (2 * SPREAD) + (50 - SPREAD);
@@ -48,11 +53,16 @@ const WorkCategoryContainer = ({ media }: CategoryMediaProps) => {
       };
     });
     setPositionedMedia(calculatedPositions);
-  }, [media]);
+  }, [media, isMobile]);
 
   const { contextSafe } = useGSAP(
     () => {
-      if (!boundsContainerRef.current || positionedMedia.length === 0) return;
+      if (
+        !boundsContainerRef.current ||
+        positionedMedia.length === 0 ||
+        isMobile
+      )
+        return;
 
       const allItems = gsap.utils.toArray<HTMLImageElement>(".draggable-item");
 
@@ -96,7 +106,7 @@ const WorkCategoryContainer = ({ media }: CategoryMediaProps) => {
         draggablesRef.current[i] = d[0];
       });
     },
-    { scope: boundsContainerRef, dependencies: [positionedMedia] },
+    { scope: boundsContainerRef, dependencies: [positionedMedia, isMobile] },
   );
 
   const handleFocus = contextSafe((idx: number) => {
@@ -179,39 +189,63 @@ const WorkCategoryContainer = ({ media }: CategoryMediaProps) => {
     <div
       onClick={handleBackgroundClick}
       ref={boundsContainerRef}
-      className="relative flex h-screen w-full items-center justify-center overflow-hidden bg-red-600"
+      className="relative flex w-full items-center justify-center overflow-hidden bg-red-600 xl:h-screen"
     >
-      <div className="relative h-[600px] w-[600px]">
-        {positionedMedia.map((item, i) =>
-          item.type === "image" ? (
-            <Image
-              key={i}
-              style={item.style}
-              src={item.src}
-              alt="image"
-              width={600}
-              height={600}
-              className={`draggable-item media-${i} absolute cursor-grab rounded-md object-contain active:cursor-grabbing`}
-              priority={true}
-              onClick={() => handleFocus(i)}
-            />
-          ) : (
-            <video
-              key={i}
-              // ref={el => videoRefs.current[i] = el}
-              style={item.style}
-              src={item.src}
-              onClick={() => handleFocus(i)}
-              width={600}
-              height={600}
-              className={`draggable-item media-${i} absolute cursor-grab rounded-md object-contain active:cursor-grabbing`}
-              loop
-              muted // Muted is crucial for programmatic play() to work reliably in browsers
-              autoPlay
-              controls
-            />
-          ),
-        )}
+      <div className="relative flex flex-col gap-12 py-28 lg:block lg:h-[600px] lg:w-[600px] lg:py-0">
+        {isMobile
+          ? media.map((item, i) =>
+              item.type === "image" ? (
+                <Image
+                  key={i}
+                  src={item.src}
+                  alt="image"
+                  width={400}
+                  height={400}
+                  className="object-contain"
+                />
+              ) : (
+                <video
+                  key={i}
+                  src={item.src}
+                  width={400}
+                  height={400}
+                  className="object-contain"
+                  loop
+                  muted
+                  autoPlay
+                  controls
+                />
+              ),
+            )
+          : positionedMedia.map((item, i) =>
+              item.type === "image" ? (
+                <Image
+                  key={i}
+                  style={item.style}
+                  src={item.src}
+                  alt="image"
+                  width={600}
+                  height={600}
+                  className={`draggable-item media-${i} absolute cursor-grab rounded-md object-contain active:cursor-grabbing`}
+                  priority={true}
+                  onClick={() => handleFocus(i)}
+                />
+              ) : (
+                <video
+                  key={i}
+                  style={item.style}
+                  src={item.src}
+                  onClick={() => handleFocus(i)}
+                  width={600}
+                  height={600}
+                  className={`draggable-item media-${i} absolute cursor-grab rounded-md object-contain active:cursor-grabbing`}
+                  loop
+                  muted
+                  autoPlay
+                  controls
+                />
+              ),
+            )}
       </div>
     </div>
   );
