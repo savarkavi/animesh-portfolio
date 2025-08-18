@@ -1,5 +1,4 @@
-import CategoryMedia from "@/components/work-category/CategoryMedia";
-import WorkCategoryHero from "@/components/work-category/WorkCategoryHero";
+import WorkCategoryContainer from "@/components/work-category/WorkCategoryContainer";
 import { workCategoriesData } from "@/utils/constants";
 import React from "react";
 
@@ -14,8 +13,9 @@ const Page = async ({ params }: { params: Promise<{ category: string }> }) => {
 
   return (
     <div className="min-h-screen">
-      <WorkCategoryHero category={currentCategory} />
-      <CategoryMedia media={currentCategory.media} />
+      {/* <WorkCategoryHero category={currentCategory} />
+      <CategoryMedia media={currentCategory.media} /> */}
+      <WorkCategoryContainer media={currentCategory.media} />
     </div>
   );
 };
