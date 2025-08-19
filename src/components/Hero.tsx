@@ -24,7 +24,7 @@ const Hero = () => {
         ease: "none",
         duration: 4,
       });
-      gsap.to(".animesh-portrait", { opacity: 1, y: 0, duration: 1 });
+      gsap.to(".animesh-portrait", { opacity: 1, y: 5, duration: 1 });
     }
   }, [isOverlayAnimComplete]);
 
@@ -81,12 +81,12 @@ const Hero = () => {
           </div>
         </div>
       </div>
-      <div className="absolute top-0 right-0 hidden h-full w-[680px] xl:block">
+      <div className="absolute top-0 right-0 hidden h-full w-[750px] xl:block">
         <PreloadImage
           src="/ani-portrait.png"
           alt="image"
           fill
-          className="animesh-portrait translate-y-30 object-cover opacity-0"
+          className="animesh-portrait translate-y-20 object-cover opacity-0"
         />
       </div>
     </div>

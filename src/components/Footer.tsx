@@ -69,7 +69,7 @@ const Footer = () => {
   }, []); // Empty dependency array ensures this effect runs only once on mount
 
   return (
-    <div className="fixed top-0 left-0 z-[90] flex h-screen w-full items-center justify-center bg-black bg-[linear-gradient(135deg,_rgba(70,69,73,0.7),_rgba(0,0,0,1)_64%)] text-white xl:justify-between">
+    <div className="fixed top-0 left-0 z-[90] flex h-screen w-full items-center justify-center bg-black bg-[linear-gradient(135deg,_rgba(70,69,73,0.7),_rgba(0,0,0,1)_64%)] p-2 text-white xl:justify-between">
       <div className="relative mx-auto">
         <div className="relative flex max-w-fit flex-1 flex-col items-center">
           <div className="flex h-full w-full flex-col items-center justify-between lg:flex-row">

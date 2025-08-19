@@ -20,12 +20,12 @@ const ExperienceRibbon = () => {
   });
 
   return (
-    <div className="z-10 w-screen -rotate-4 overflow-x-hidden border-y border-black bg-white p-1">
+    <div className="z-10 -ml-1 w-[105%] -rotate-4 border-y border-black bg-white p-1 xl:-rotate-2">
       <div
         ref={ribbonContainerRef}
         className="flex w-max rounded-xl bg-[#6D28D9] py-4 text-nowrap"
       >
-        <div className="flex w-full items-center justify-between gap-50 pr-[150px] pl-6 uppercase">
+        <div className="flex w-screen items-center justify-between pr-[200px] uppercase">
           {Array.from({ length: 5 }, (_, i) => (
             <p
               key={i}
@@ -35,7 +35,7 @@ const ExperienceRibbon = () => {
             </p>
           ))}
         </div>
-        <div className="flex w-full items-center justify-between gap-50 pr-[150px] pl-6 uppercase">
+        <div className="flex w-screen items-center justify-between pr-[200px] uppercase">
           {Array.from({ length: 5 }, (_, i) => (
             <p
               key={i}
