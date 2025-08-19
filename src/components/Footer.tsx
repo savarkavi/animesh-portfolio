@@ -102,7 +102,7 @@ const Footer = () => {
                 {item}
               </p>
             ))}
-            <div className="heart-svg relative h-[40px] w-[40px] md:h-[60px] md:w-[60px]">
+            <div className="heart-svg relative h-[30px] w-[30px] md:h-[60px] md:w-[60px]">
               <Image
                 src="/heart-svgrepo-com (2).svg"
                 alt="heart svg"
