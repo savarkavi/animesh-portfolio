@@ -13,8 +13,6 @@ const Page = async ({ params }: { params: Promise<{ category: string }> }) => {
 
   return (
     <div className="min-h-screen">
-      {/* <WorkCategoryHero category={currentCategory} />
-      <CategoryMedia media={currentCategory.media} /> */}
       <WorkCategoryContainer media={currentCategory.media} />
     </div>
   );

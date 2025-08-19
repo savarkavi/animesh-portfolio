@@ -1,6 +1,6 @@
 "use client";
 
-import { electroharmonix } from "@/app/fonts/fonts";
+import { adeDisplay } from "@/app/fonts/fonts";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import React, { useRef } from "react";
@@ -23,23 +23,23 @@ const ExperienceRibbon = () => {
     <div className="z-10 w-screen -rotate-4 overflow-x-hidden border-y border-black bg-white p-1">
       <div
         ref={ribbonContainerRef}
-        className="flex w-max rounded-xl bg-red-500 py-4 text-nowrap"
+        className="flex w-max rounded-xl bg-[#6D28D9] py-4 text-nowrap"
       >
-        <div className="flex w-full items-center justify-between gap-50 pr-[150px] pl-6">
+        <div className="flex w-full items-center justify-between gap-50 pr-[150px] pl-6 uppercase">
           {Array.from({ length: 5 }, (_, i) => (
             <p
               key={i}
-              className={`${electroharmonix.className} text-lg font-black tracking-wider lg:text-3xl`}
+              className={`${adeDisplay.className} text-lg font-black tracking-wider lg:text-2xl`}
             >
               Experience
             </p>
           ))}
         </div>
-        <div className="flex w-full items-center justify-between gap-50 pr-[150px] pl-6">
+        <div className="flex w-full items-center justify-between gap-50 pr-[150px] pl-6 uppercase">
           {Array.from({ length: 5 }, (_, i) => (
             <p
               key={i}
-              className={`${electroharmonix.className} font-black tracking-wider lg:text-3xl`}
+              className={`${adeDisplay.className} font-black tracking-wider lg:text-2xl`}
             >
               Experience
             </p>

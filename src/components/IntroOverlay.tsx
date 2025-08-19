@@ -68,7 +68,7 @@ const IntroOverlay = () => {
         />
       </div>
       <p className="loading-text absolute bottom-8 left-1/2 -translate-x-1/2 text-9xl text-white 2xl:bottom-6 2xl:left-8 2xl:translate-0 2xl:text-[12rem]">
-        {Math.floor(progress)}
+        {progress && Math.floor(progress)}
       </p>
     </div>
   );

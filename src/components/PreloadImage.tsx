@@ -27,6 +27,7 @@ const useImageLoader = (src: string | undefined) => {
       img.removeEventListener("error", handleLoad);
     };
   }, [src, registerMedia, mediaLoaded]);
+  console.log(src);
 };
 
 const PreloadImage = (props: ImageProps) => {

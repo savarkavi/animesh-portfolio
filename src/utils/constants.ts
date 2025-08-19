@@ -103,7 +103,7 @@ export const workExperienceData = [
     role: "Video Editor / Animator",
     type: "Freelance",
     description:
-      "I worked with the product marketing department to conceptualize and execute animations and editing of music videos for artists like Mitraz and Harjas Harjayee.",
+      "I worked with the product marketing department to conceptualize and execute animations and editing of music videos for artists like Mitraz",
     imgSrc: "/sony-music-img.webp",
   },
   {

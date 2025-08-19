@@ -69,7 +69,7 @@ const WorkExperienceContainer = () => {
           <div key={item.company} className="flex gap-16">
             <p className="hidden text-xl font-bold text-[#3b82f6] md:block xl:text-3xl">{`${i + 1})`}</p>
             <div
-              className={`relative flex flex-1 flex-col items-center gap-8 experienceItem-${i + 1} rounded-xl bg-white bg-[linear-gradient(to_right,#0000001a_1px,transparent_1px),linear-gradient(to_bottom,#0000001a_1px,transparent_1px)] bg-[size:20px_20px] px-2 py-16 shadow-[-10px_10px_0px_0px_#6D28D9,-20px_20px_0px_0px_#ffd166] lg:px-8 xl:py-10 2xl:py-16`}
+              className={`relative flex flex-1 flex-col items-center gap-8 experienceItem-${i + 1} rounded-xl bg-white bg-[linear-gradient(to_right,#0000001a_1px,transparent_1px),linear-gradient(to_bottom,#0000001a_1px,transparent_1px)] bg-[size:20px_20px] px-2 py-16 shadow-[-10px_10px_0px_0px_#6D28D9] lg:px-8 xl:py-10 2xl:py-16`}
             >
               <div
                 className={`experience-title experience-title-${i} relative`}
@@ -96,7 +96,9 @@ const WorkExperienceContainer = () => {
                   />
                 )}
               </div>
-              <p className="mt-4 text-lg text-red-500">{item.role}</p>
+              <p className="mt-4 text-lg font-bold text-[#6D28D9]">
+                {item.role}
+              </p>
               <p className="max-w-[520px] text-center text-xl font-semibold">
                 {item.description}
               </p>

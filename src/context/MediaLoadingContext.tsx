@@ -10,7 +10,7 @@ import {
 } from "react";
 
 interface MediaLoadingContextType {
-  progress: number;
+  progress: number | undefined;
   allLoaded: boolean;
   isOverlayAnimComplete: boolean;
   registerMedia: () => void;
@@ -40,7 +40,8 @@ export const MediaLoadingProvider = ({ children }: { children: ReactNode }) => {
     setIsOverlayAnimComplete(true);
   }, []);
 
-  const progress = totalMedia > 0 ? (loadedMedia / totalMedia) * 100 : 100;
+  const progress =
+    totalMedia > 0 ? (loadedMedia / totalMedia) * 100 : undefined;
 
   useEffect(() => {
     if (loadedMedia === totalMedia) {
