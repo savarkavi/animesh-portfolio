@@ -20,7 +20,7 @@ const ExperienceRibbon = () => {
   });
 
   return (
-    <div className="z-10 -ml-1 w-[105%] -rotate-4 border-y border-black bg-white p-1 xl:-rotate-2">
+    <div className="z-10 -ml-1 w-[105%] -rotate-4 border-y border-black bg-white p-1 xl:-rotate-2 2xl:-rotate-4">
       <div
         ref={ribbonContainerRef}
         className="flex w-max rounded-xl bg-[#6D28D9] py-4 text-nowrap"
