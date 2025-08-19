@@ -5,58 +5,91 @@ import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { useRef } from "react";
 
-gsap.registerPlugin(useGSAP);
-
-const TitleMarquee = () => {
-  const featuredTitleLeftContainerRef = useRef<HTMLDivElement>(null);
-  const featuredTitleRightContainerRef = useRef<HTMLDivElement>(null);
-
-  useGSAP(() => {
-    gsap.to(featuredTitleLeftContainerRef.current, {
-      xPercent: -50,
-      ease: "none",
-      duration: 10,
-      repeat: -1,
-    });
-    gsap.to(featuredTitleRightContainerRef.current, {
-      xPercent: 0,
-      ease: "none",
-      duration: 10,
-      repeat: -1,
-    });
-  });
+const MarqueeContent = ({ isOutlined = false }) => {
+  const repetitions = 5;
+  const textClasses = isOutlined
+    ? "outline-text text-transparent opacity-50"
+    : "text-blue-500";
 
   return (
-    <div className={`${zenOldMincho.className} mt-20 w-full 2xl:mt-40`}>
+    <div className="flex w-max items-center gap-x-12 uppercase lg:gap-x-16">
+      {Array.from({ length: repetitions }, (_, i) => (
+        <p
+          key={i}
+          className={`${textClasses} sm:leading-20 lg:leading-28 xl:leading-32 2xl:leading-48`}
+        >
+          Featured Work
+        </p>
+      ))}
+    </div>
+  );
+};
+
+const TitleMarquee = () => {
+  const marqueeContainerRef = useRef<HTMLDivElement>(null);
+  const leftMarqueeRef = useRef<HTMLDivElement>(null);
+  const rightMarqueeRef = useRef<HTMLDivElement>(null);
+
+  useGSAP(
+    () => {
+      const leftMarquee = leftMarqueeRef.current;
+      const rightMarquee = rightMarqueeRef.current;
+      if (!leftMarquee || !rightMarquee) return;
+
+      const setupAnimations = () => {
+        gsap.killTweensOf([leftMarquee, rightMarquee]);
+
+        const pixelsPerSecond = 80;
+
+        const travelDistance = leftMarquee.offsetWidth / 2;
+
+        const newDuration = travelDistance / pixelsPerSecond;
+
+        gsap.to(leftMarquee, {
+          xPercent: -50,
+          ease: "none",
+          duration: newDuration,
+          repeat: -1,
+        });
+
+        gsap.to(rightMarquee, {
+          xPercent: 0,
+          ease: "none",
+          duration: newDuration,
+          repeat: -1,
+        });
+      };
+
+      setupAnimations();
+
+      window.addEventListener("resize", setupAnimations);
+
+      return () => {
+        window.removeEventListener("resize", setupAnimations);
+      };
+    },
+    { scope: marqueeContainerRef },
+  );
+
+  return (
+    <div
+      ref={marqueeContainerRef}
+      className={`${zenOldMincho.className} mt-20 w-full overflow-hidden 2xl:mt-40`}
+    >
       <div
-        ref={featuredTitleLeftContainerRef}
-        className="flex w-max text-[2.4rem] font-extrabold tracking-wider text-nowrap text-blue-500 uppercase sm:text-6xl md:text-7xl lg:text-8xl xl:text-[7.8rem] 2xl:text-[11.7rem]"
+        ref={leftMarqueeRef}
+        className="flex w-max gap-x-12 text-[2.4rem] font-extrabold tracking-wider text-nowrap text-blue-500 sm:text-6xl md:text-7xl lg:gap-x-16 lg:text-8xl xl:text-[7.8rem] 2xl:text-[11.7rem]"
       >
-        <div className="w-screen">
-          <p className="sm:leading-20 lg:leading-28 xl:leading-32 2xl:leading-48">
-            Featured Work
-          </p>
-        </div>
-        <div className="w-screen">
-          <p className="sm:leading-20 lg:leading-28 xl:leading-32 2xl:leading-48">
-            Featured Work
-          </p>
-        </div>
+        <MarqueeContent />
+        <MarqueeContent />
       </div>
+
       <div
-        ref={featuredTitleRightContainerRef}
-        className="outline-text flex w-max -translate-x-[50%] text-[2.4rem] font-bold tracking-wider text-nowrap text-transparent uppercase opacity-50 sm:text-6xl md:text-7xl lg:text-8xl xl:text-[7.8rem] 2xl:text-[11.7rem]"
+        ref={rightMarqueeRef}
+        className="flex w-max -translate-x-[50%] gap-x-12 text-[2.4rem] font-bold tracking-wider text-nowrap sm:text-6xl md:text-7xl lg:gap-x-16 lg:text-8xl xl:text-[7.8rem] 2xl:text-[11.7rem]"
       >
-        <div className="w-screen">
-          <p className="sm:leading-20 lg:leading-28 xl:leading-32 2xl:leading-48">
-            Featured work
-          </p>
-        </div>
-        <div className="w-screen">
-          <p className="sm:leading-20 lg:leading-28 xl:leading-32 2xl:leading-48">
-            Featured work
-          </p>
-        </div>
+        <MarqueeContent isOutlined />
+        <MarqueeContent isOutlined />
       </div>
     </div>
   );

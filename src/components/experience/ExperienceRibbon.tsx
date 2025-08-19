@@ -5,46 +5,67 @@ import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import React, { useRef } from "react";
 
-gsap.registerPlugin(useGSAP);
+const RibbonText = () => {
+  const repetitions = 15;
+
+  return (
+    <div className="flex w-max items-center gap-24 uppercase">
+      {Array.from({ length: repetitions }, (_, i) => (
+        <p
+          key={i}
+          className={`${adeDisplay.className} text-lg font-black tracking-wider text-white lg:text-2xl`}
+        >
+          Experience
+        </p>
+      ))}
+    </div>
+  );
+};
 
 const ExperienceRibbon = () => {
   const ribbonContainerRef = useRef<HTMLDivElement>(null);
 
-  useGSAP(() => {
-    gsap.to(ribbonContainerRef.current, {
-      xPercent: -50,
-      ease: "none",
-      duration: 10,
-      repeat: -1,
-    });
-  });
+  useGSAP(
+    () => {
+      const ribbon = ribbonContainerRef.current;
+      if (!ribbon) return;
+
+      const setupMarqueeAnimation = () => {
+        gsap.killTweensOf(ribbon);
+
+        const pixelsPerSecond = 100;
+
+        const travelDistance = ribbon.offsetWidth / 2;
+
+        const newDuration = travelDistance / pixelsPerSecond;
+
+        gsap.to(ribbon, {
+          xPercent: -50,
+          ease: "none",
+          duration: newDuration,
+          repeat: -1,
+        });
+      };
+
+      setupMarqueeAnimation();
+
+      window.addEventListener("resize", setupMarqueeAnimation);
+
+      return () => {
+        window.removeEventListener("resize", setupMarqueeAnimation);
+      };
+    },
+    { scope: ribbonContainerRef },
+  );
 
   return (
-    <div className="z-10 -ml-1 w-[105%] -rotate-4 border-y border-black bg-white p-1 xl:-rotate-2 2xl:-rotate-4">
+    <div className="z-10 -ml-1 w-[105%] overflow-hidden border-y border-black bg-white p-1 md:-rotate-2">
       <div
         ref={ribbonContainerRef}
-        className="flex w-max rounded-xl bg-[#6D28D9] py-4 text-nowrap"
+        className="flex w-max gap-20 bg-[#6D28D9] py-4 text-nowrap"
       >
-        <div className="flex w-screen items-center justify-between pr-[200px] uppercase">
-          {Array.from({ length: 5 }, (_, i) => (
-            <p
-              key={i}
-              className={`${adeDisplay.className} text-lg font-black tracking-wider lg:text-2xl`}
-            >
-              Experience
-            </p>
-          ))}
-        </div>
-        <div className="flex w-screen items-center justify-between pr-[200px] uppercase">
-          {Array.from({ length: 5 }, (_, i) => (
-            <p
-              key={i}
-              className={`${adeDisplay.className} font-black tracking-wider lg:text-2xl`}
-            >
-              Experience
-            </p>
-          ))}
-        </div>
+        <RibbonText />
+        <RibbonText />
       </div>
     </div>
   );
