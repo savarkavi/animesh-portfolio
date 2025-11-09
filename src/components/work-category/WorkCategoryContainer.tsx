@@ -189,7 +189,7 @@ const WorkCategoryContainer = ({ media }: CategoryMediaProps) => {
     <div
       onClick={handleBackgroundClick}
       ref={boundsContainerRef}
-      className="relative flex w-full items-center justify-center overflow-hidden bg-[#fff6db] xl:h-screen"
+      className="relative flex w-full items-center justify-center overflow-hidden bg-[#fff6db] bg-[linear-gradient(to_right,#0000001a_1px,transparent_1px),linear-gradient(to_bottom,#0000001a_1px,transparent_1px)] bg-[size:20px_20px] xl:h-screen"
     >
       <div className="relative flex flex-col gap-12 px-4 py-28 lg:block lg:h-[600px] lg:w-[600px] lg:p-0">
         {isMobile
