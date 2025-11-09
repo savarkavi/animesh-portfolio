@@ -31,7 +31,7 @@ const BrandsContainer = () => {
   return (
     <div
       ref={brandsContainerRef}
-      className="brands-container flex h-screen w-full flex-col items-center justify-center border-dashed border-black p-8 xl:w-[50%] xl:border-r xl:p-16"
+      className="brands-container hidden h-screen w-full flex-col items-center justify-center border-dashed border-black p-8 xl:flex xl:w-[50%] xl:border-r xl:p-16"
     >
       <div className="mt-20 grid w-full grid-cols-2 border border-black">
         {brandsData.map((item, i) => (
