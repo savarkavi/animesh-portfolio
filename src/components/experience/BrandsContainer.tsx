@@ -38,7 +38,7 @@ const BrandsContainer = () => {
           <div
             onMouseEnter={() => handleHover(i + 1)}
             key={item.label}
-            className={`"h-[200px] relative border border-gray-500 xl:h-[150px] 2xl:h-[200px]`}
+            className={`"h-[250px] relative border border-gray-500 xl:h-[150px] 2xl:h-[250px]`}
           >
             <PreloadImage
               src={item.src}
