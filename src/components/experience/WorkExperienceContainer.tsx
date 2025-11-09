@@ -22,7 +22,7 @@ const WorkExperienceContainer = () => {
       gsap.timeline({
         scrollTrigger: {
           trigger: ".work-experience-container",
-          start: "3.5% top",
+          start: "top top",
           end: "bottom bottom",
           pin: ".brands-container",
           scrub: 1,
@@ -67,9 +67,8 @@ const WorkExperienceContainer = () => {
       <div className="relative mt-8 flex flex-col gap-16 xl:mt-16">
         {workExperienceData.map((item, i) => (
           <div key={item.company} className="flex gap-16">
-            <p className="hidden text-xl font-bold text-[#3b82f6] md:block xl:text-3xl">{`${i + 1})`}</p>
             <div
-              className={`relative flex flex-1 flex-col items-center gap-8 experienceItem-${i + 1} rounded-xl bg-white bg-[linear-gradient(to_right,#0000001a_1px,transparent_1px),linear-gradient(to_bottom,#0000001a_1px,transparent_1px)] bg-[size:20px_20px] px-2 py-16 shadow-[-10px_10px_0px_0px_#6D28D9] lg:px-8 xl:py-10 2xl:py-16`}
+              className={`relative flex flex-1 flex-col items-center gap-8 experienceItem-${i + 1} rounded-xl bg-white bg-[linear-gradient(to_right,#0000001a_1px,transparent_1px),linear-gradient(to_bottom,#0000001a_1px,transparent_1px)] bg-[size:20px_20px] px-2 py-16 shadow-[-10px_10px_0px_0px_#f54a00] lg:px-8 xl:py-10 2xl:py-16`}
             >
               <div
                 className={`experience-title experience-title-${i} relative`}
@@ -84,7 +83,7 @@ const WorkExperienceContainer = () => {
                     viewBox="0 0 240 100"
                     className="my-svg-animation absolute -bottom-4 h-[200px] w-full translate-y-1/2"
                     path="M0 50 C 20 40, 40 60, 60 50 C 80 40, 100 60, 120 50 C 140 40, 160 60, 180 50 C 200 40, 220 60, 240 50"
-                    strokeColor="#3b82f6"
+                    strokeColor="#f54a00"
                     strokeWidth={1.5}
                     strokeLinecap="round"
                     animationDuration={1.5}
