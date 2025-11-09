@@ -10,8 +10,8 @@ const ExperienceContainer = () => {
     <div className="min-h-screen bg-[#fff6db] pb-10">
       <ExperienceRibbon />
       <div className="experience-columns-wrapper flex h-full flex-col xl:flex-row">
-        <BrandsContainer />
         <WorkExperienceContainer />
+        <BrandsContainer />
       </div>
     </div>
   );
