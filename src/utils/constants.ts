@@ -68,10 +68,6 @@ export const headerItems = [
 
 export const brandsData = [
   {
-    label: "Sasin productions",
-    src: "/brand-img-1.png",
-  },
-  {
     label: "Sony music",
     src: "/brand-img-2.png",
   },
@@ -116,10 +112,9 @@ export const workExperienceData = [
   },
   {
     company: "Gully Gang",
-    role: "Illustrator",
+    role: "Video editor / Illustrator / Graphic designer",
     type: "Freelance",
-    description:
-      "I crafted an animated loop and an album artwork for the for a song.",
+    description: "Helped design gully fest 2024 held in Mumbai",
     imgSrc: "/gully-gang-img1.webp",
   },
   {
@@ -130,13 +125,7 @@ export const workExperienceData = [
       "Designed a visual identity for a song comprising an album cover, a youtube thumbnail and a cohesive youtube banner.",
     imgSrc: "/gully-gang-img1.webp",
   },
-  {
-    company: "Sasin Productions",
-    role: "Graphic Designer / Animator",
-    type: "Freelance",
-    description: "Designed an animation loop and an album artwork for a song.",
-    imgSrc: "/gully-gang-img1.webp",
-  },
+
   {
     company: "Filtr India",
     role: "Illustrator",
@@ -277,74 +266,7 @@ export const workCategoriesData = [
       },
     ],
   },
-  // {
-  //   label: "Music visualizer",
-  //   coverImg: "/music-visualizer-img.jpeg",
-  //   media: [
-  //     {
-  //       label: "Sun mirror",
-  //       src: "https://wpyy1h42p2.ufs.sh/f/ieAAD0sTR7aJaDDkRJNbu9q58M7NpWmUTdGYfs3jlAVi0CtQ",
-  //     },
-  //     {
-  //       label: "Reversion",
-  //       src: "https://wpyy1h42p2.ufs.sh/f/ieAAD0sTR7aJPQk2cEBFjrcEBJKn6Z9I2eoH5dGQhyNmDMw0",
-  //     },
-  //     {
-  //       label: "Marzi album",
-  //       src: "https://wpyy1h42p2.ufs.sh/f/ieAAD0sTR7aJNxsJaL97gbnoU2RW8x01PQY6ht4BryZpmdOw",
-  //     },
-  //     {
-  //       label: "Janneya album",
-  //       src: "https://wpyy1h42p2.ufs.sh/f/ieAAD0sTR7aJkcRGRF0NVkY9ZQ1drp2yGL3IRv8D64KanJgB",
-  //     },
-  //     {
-  //       label: "Lofi hits",
-  //       src: "https://wpyy1h42p2.ufs.sh/f/ieAAD0sTR7aJQFyZfm86guYzrwSToPGIetL3y5fqWVxiXk0N",
-  //     },
-  //     {
-  //       label: "Lonely kid",
-  //       src: "https://wpyy1h42p2.ufs.sh/f/ieAAD0sTR7aJpo78UKkUfvgWFaYhxDsj8G7ZHQlTLcK2d1eB",
-  //     },
-  //     {
-  //       label: "Indie lofie",
-  //       src: "https://wpyy1h42p2.ufs.sh/f/ieAAD0sTR7aJJnOm2Nb0o2Y7RjkVi9ZChD1dqAsbMITFK3Px",
-  //     },
-  //   ],
-  // },
-  // {
-  //   label: "2D animation",
-  //   coverImg: "/featured-work-img1.heic",
-  //   media: [
-  //     {
-  //       label: "Sun mirror",
-  //       src: "https://wpyy1h42p2.ufs.sh/f/ieAAD0sTR7aJaDDkRJNbu9q58M7NpWmUTdGYfs3jlAVi0CtQ",
-  //     },
-  //     {
-  //       label: "Reversion",
-  //       src: "https://wpyy1h42p2.ufs.sh/f/ieAAD0sTR7aJPQk2cEBFjrcEBJKn6Z9I2eoH5dGQhyNmDMw0",
-  //     },
-  //     {
-  //       label: "Marzi album",
-  //       src: "https://wpyy1h42p2.ufs.sh/f/ieAAD0sTR7aJNxsJaL97gbnoU2RW8x01PQY6ht4BryZpmdOw",
-  //     },
-  //     {
-  //       label: "Janneya album",
-  //       src: "https://wpyy1h42p2.ufs.sh/f/ieAAD0sTR7aJkcRGRF0NVkY9ZQ1drp2yGL3IRv8D64KanJgB",
-  //     },
-  //     {
-  //       label: "Lofi hits",
-  //       src: "https://wpyy1h42p2.ufs.sh/f/ieAAD0sTR7aJQFyZfm86guYzrwSToPGIetL3y5fqWVxiXk0N",
-  //     },
-  //     {
-  //       label: "Lonely kid",
-  //       src: "https://wpyy1h42p2.ufs.sh/f/ieAAD0sTR7aJpo78UKkUfvgWFaYhxDsj8G7ZHQlTLcK2d1eB",
-  //     },
-  //     {
-  //       label: "Indie lofie",
-  //       src: "https://wpyy1h42p2.ufs.sh/f/ieAAD0sTR7aJJnOm2Nb0o2Y7RjkVi9ZChD1dqAsbMITFK3Px",
-  //     },
-  //   ],
-  // },
+
   {
     label: "Fan Art",
     coverImg: "/fan-art-img.heic",
