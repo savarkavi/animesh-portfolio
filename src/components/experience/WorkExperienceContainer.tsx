@@ -22,7 +22,7 @@ const WorkExperienceContainer = () => {
       gsap.timeline({
         scrollTrigger: {
           trigger: ".work-experience-container",
-          start: "top top",
+          start: "2% top",
           end: "bottom bottom",
           pin: ".brands-container",
           scrub: 1,
@@ -61,7 +61,7 @@ const WorkExperienceContainer = () => {
 
   return (
     <div className="work-experience-container relative flex h-full w-full items-center justify-center px-8 py-16 text-black xl:w-[50%]">
-      <div className="scroll-progress absolute top-0 left-0 h-0 w-[2px] -translate-x-1/2 bg-black">
+      <div className="scroll-progress absolute top-0 right-0 h-0 w-[2px] -translate-x-1/2 bg-black">
         <GiPolarStar className="star invisible absolute bottom-0 left-0 size-8 -translate-x-1/2 translate-y-1/2" />
       </div>
       <div className="relative mt-8 flex flex-col gap-16 xl:mt-16">
@@ -73,7 +73,7 @@ const WorkExperienceContainer = () => {
               <div
                 className={`experience-title experience-title-${i} relative`}
               >
-                <p className="text-center text-3xl text-[#3b82f6] uppercase 2xl:text-5xl">
+                <p className="text-center text-3xl font-bold text-[#3b82f6] uppercase 2xl:text-5xl">
                   {item.company}
                 </p>
                 {isSvgVisible[i] && (
@@ -95,10 +95,8 @@ const WorkExperienceContainer = () => {
                   />
                 )}
               </div>
-              <p className="mt-4 text-lg font-bold text-[#6D28D9]">
-                {item.role}
-              </p>
-              <p className="max-w-[520px] text-center text-xl font-semibold">
+              <p className="mt-4 text-lg font-bold">{item.role}</p>
+              <p className="max-w-[520px] text-center text-lg">
                 {item.description}
               </p>
             </div>
