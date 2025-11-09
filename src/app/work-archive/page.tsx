@@ -58,7 +58,7 @@ const Page = () => {
         {workCategoriesData.map((item, i) => (
           <div
             key={item.label}
-            className={`relative h-[100px] cursor-pointer overflow-y-hidden border bg-white text-2xl font-bold text-black uppercase shadow-[-10px_10px_0px_0px_#6D28D9] md:text-5xl`}
+            className={`relative h-[100px] cursor-pointer overflow-y-hidden border bg-white text-2xl font-bold text-black uppercase shadow-[-10px_10px_0px_0px_#f54a00] md:text-5xl`}
             onMouseEnter={() => handleItemHover(i)}
             onMouseLeave={() => handleItemLeave(i)}
           >
