@@ -31,14 +31,14 @@ const BrandsContainer = () => {
   return (
     <div
       ref={brandsContainerRef}
-      className="brands-container flex h-full w-full flex-col items-center border-dashed border-black p-8 xl:w-[50%] xl:border-r xl:p-16"
+      className="brands-container flex h-screen w-full flex-col items-center justify-center border-dashed border-black p-8 xl:w-[50%] xl:border-r xl:p-16"
     >
       <div className="mt-20 grid w-full grid-cols-2 border border-black">
         {brandsData.map((item, i) => (
           <div
             onMouseEnter={() => handleHover(i + 1)}
             key={item.label}
-            className={`relative border border-gray-500 ${i === brandsData.length - 1 ? "col-span-2 h-[250px] xl:h-[200px] 2xl:h-[250px]" : "h-[200px] xl:h-[150px] 2xl:h-[200px]"}`}
+            className={`"h-[200px] relative border border-gray-500 xl:h-[150px] 2xl:h-[200px]`}
           >
             <PreloadImage
               src={item.src}

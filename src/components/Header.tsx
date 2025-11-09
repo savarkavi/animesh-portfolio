@@ -27,7 +27,7 @@ const Header = () => {
         {headerItems.map((item) => (
           <button
             key={item.id}
-            className="header-btn -translate-y-50 cursor-pointer border bg-white px-4 py-1 text-sm font-extrabold text-black uppercase shadow-[-5px_5px_0px_0px_#6D28D9]"
+            className="header-btn -translate-y-50 cursor-pointer border bg-white px-4 py-1 text-sm font-extrabold text-black uppercase shadow-[-5px_5px_0px_0px_#f54a00]"
           >
             <Link href={item.link}>{item.label}</Link>
           </button>

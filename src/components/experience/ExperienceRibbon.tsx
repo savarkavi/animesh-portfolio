@@ -62,7 +62,7 @@ const ExperienceRibbon = () => {
     <div className="z-10 -ml-1 w-[105%] overflow-hidden border-y border-black bg-white p-1 md:-rotate-2">
       <div
         ref={ribbonContainerRef}
-        className="flex w-max gap-20 bg-[#6D28D9] py-4 text-nowrap"
+        className="flex w-max gap-20 bg-[#f54a00] py-4 text-nowrap"
       >
         <RibbonText />
         <RibbonText />
@@ -72,3 +72,5 @@ const ExperienceRibbon = () => {
 };
 
 export default ExperienceRibbon;
+
+// #6D28D9
