@@ -2,7 +2,7 @@
 
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { ScrollTrigger } from "gsap/all";
 import { MorphSVGPlugin } from "gsap/MorphSVGPlugin";
 import React, { useRef } from "react";
 import TitleMarquee from "./TitleMarquee";
@@ -21,16 +21,19 @@ const FeaturedWorkSection = () => {
 
   useGSAP(
     () => {
-      gsap.to(wavePathRef.current, {
-        attr: { d: endPath },
-        ease: "none",
-        scrollTrigger: {
-          trigger: ".featured-work-content",
-          start: "top 90%",
-          end: "top top",
-          scrub: true,
-        },
-      });
+      gsap
+        .timeline({
+          scrollTrigger: {
+            trigger: ".featured-work-content",
+            start: "top 90%",
+            end: "top top",
+            scrub: true,
+          },
+        })
+        .to(wavePathRef.current, {
+          attr: { d: endPath },
+          ease: "none",
+        });
     },
     { scope: containerRef },
   );
