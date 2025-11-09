@@ -93,7 +93,7 @@ const Footer = () => {
               </div>
             </div>
 
-            <div className="flex w-full items-center justify-between gap-4">
+            <div className="flex w-full items-center justify-center gap-4 xl:justify-between">
               {"Thank you for visiting".split(" ").map((item, i) => (
                 <p
                   key={i}

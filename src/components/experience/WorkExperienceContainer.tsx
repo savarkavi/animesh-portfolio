@@ -95,7 +95,7 @@ const WorkExperienceContainer = () => {
                   />
                 )}
               </div>
-              <p className="mt-4 text-lg font-bold">{item.role}</p>
+              <p className="mt-4 text-center text-lg font-bold">{item.role}</p>
               <p className="max-w-[520px] text-center text-lg">
                 {item.description}
               </p>
