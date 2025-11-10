@@ -80,7 +80,7 @@ const Page = () => {
               </div>
             </Link>
             <div
-              className={`category-img-${i} fixed right-4 bottom-4 z-[99] h-[200px] w-[150px] border bg-white/80 lg:h-[250px] lg:w-[200px] xl:h-[450px] xl:w-[450px]`}
+              className={`category-img-${i} fixed right-4 bottom-4 z-[99] h-[200px] w-[150px] rounded-lg border bg-white/80 lg:h-[250px] lg:w-[200px] xl:h-[450px] xl:w-[450px]`}
               style={{
                 clipPath: "polygon(50% 50%, 50% 50%, 50% 50%, 50% 50%)",
               }}
@@ -89,7 +89,7 @@ const Page = () => {
                 src={item.coverImg}
                 alt="category image"
                 fill
-                className="object-cover"
+                className="rounded-lg object-cover"
               />
             </div>
           </div>

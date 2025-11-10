@@ -59,9 +59,9 @@ const Hero = () => {
           <GiPolarStar className="size-16" />
           <div className="h-[1px] w-full bg-white" />
         </div>
-        <div className="hero-about-text relative w-full max-w-[800px] translate-y-50 rounded-2xl bg-white bg-[linear-gradient(to_right,#0000001a_1px,transparent_1px),linear-gradient(to_bottom,#0000001a_1px,transparent_1px)] bg-[size:20px_20px] p-8 opacity-0 shadow-[-10px_10px_0px_0px_#f54a00] md:p-10 xl:w-[500px] 2xl:w-full">
+        <div className="hero-about-text relative w-full max-w-[800px] translate-y-50 rounded-2xl bg-white bg-[linear-gradient(to_right,#0000001a_1px,transparent_1px),linear-gradient(to_bottom,#0000001a_1px,transparent_1px)] bg-[size:20px_20px] p-8 opacity-0 shadow-[-10px_10px_0px_0px_#f54a00] md:p-12 xl:w-[500px] 2xl:w-full">
           <p
-            className={`text-justify font-extrabold text-blue-600 md:text-xl xl:text-base 2xl:text-xl`}
+            className={`text-center font-semibold text-black md:text-xl xl:text-base 2xl:text-xl`}
           >
             Hi! I’m a digital artist passionate about bringing imagination to
             life through pixels and color. My work blends creativity with

@@ -73,7 +73,7 @@ const WorkExperienceContainer = () => {
               <div
                 className={`experience-title experience-title-${i} relative`}
               >
-                <p className="text-center text-3xl font-bold text-[#3b82f6] uppercase 2xl:text-5xl">
+                <p className="text-center text-3xl font-bold text-black uppercase 2xl:text-5xl">
                   {item.company}
                 </p>
                 {isSvgVisible[i] && (
@@ -96,7 +96,7 @@ const WorkExperienceContainer = () => {
                 )}
               </div>
               <p className="mt-4 text-center text-lg font-bold">{item.role}</p>
-              <p className="max-w-[520px] text-center text-lg">
+              <p className="max-w-[520px] text-center text-lg text-gray-600">
                 {item.description}
               </p>
             </div>
