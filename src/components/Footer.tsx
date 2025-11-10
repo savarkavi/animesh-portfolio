@@ -7,6 +7,7 @@ import Image from "next/image";
 import React, { useRef } from "react";
 import LinkHoverUnderline from "./LinkHoverUnderline";
 import { adeDisplay } from "@/app/fonts/fonts";
+import Link from "next/link";
 
 gsap.registerPlugin(useGSAP);
 
@@ -125,7 +126,12 @@ const Footer = () => {
               ))}
             </div>
             <div className="flex flex-col items-center gap-8 text-[12px] tracking-wide">
-              <p className="md:text-base">Mail: animesh_sesnsie@gmail.com</p>
+              <Link
+                href="mailto:animesh.sharma.art@gmail.com"
+                className="md:text-base"
+              >
+                Mail: animesh.sharma.art@gmail.com
+              </Link>
               <p className="md:text-base">Phone: 9840771756</p>
             </div>
           </div>

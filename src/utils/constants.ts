@@ -47,11 +47,11 @@ export const socialLinks = [
     content: "@animesh_sesnsie",
     link: "https://www.instagram.com/animesh_sensei",
   },
-  {
-    name: "Youtube",
-    content: "@animesh_sesnsie",
-    link: "/",
-  },
+  // {
+  //   name: "Youtube",
+  //   content: "@animesh_sesnsie",
+  //   link: "/",
+  // },
   {
     name: "Behance",
     content: "@animesh_sesnsie",
@@ -63,7 +63,7 @@ export const headerItems = [
   { id: 1, label: "Home", link: "/" },
   { id: 2, label: "Works", link: "/work-archive" },
   // { id: 3, label: "About", link: "/about" },
-  { id: 4, label: "Contact", link: "mailto:animesh_sesnsie@gmail.com" },
+  { id: 4, label: "Contact", link: "mailto:animesh.sharma.art@gmail.com" },
 ];
 
 export const brandsData = [
