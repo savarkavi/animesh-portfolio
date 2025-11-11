@@ -28,13 +28,13 @@ const Page = () => {
           .timeline()
           .to(`.work-category-${i}`, {
             yPercent: -100,
-            duration: 0.3,
+            duration: 0.2,
           })
           .to(
             `.category-img-${i}`,
             {
               clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
-              duration: 0.3,
+              duration: 0.2,
             },
             "<",
           ),

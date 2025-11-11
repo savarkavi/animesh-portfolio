@@ -47,7 +47,7 @@ const BrandsContainer = () => {
               className="object-contain"
             />
             <div
-              className={`brand-image-overlay-${i + 1} absolute top-0 left-0 h-full w-full bg-blue-500`}
+              className={`brand-image-overlay-${i + 1} absolute top-0 left-0 h-full w-full bg-orange-500`}
               style={{ clipPath: "polygon(0% 0%, 0% 0%, 0% 100%, 0% 100%)" }}
             />
           </div>

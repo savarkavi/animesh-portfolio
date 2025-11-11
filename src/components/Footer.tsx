@@ -70,7 +70,7 @@ const Footer = () => {
   }, []); // Empty dependency array ensures this effect runs only once on mount
 
   return (
-    <div className="bg-[linear-gradient(135deg,_rgba(213, 255, 255, 1),_rgb(59, 130, 246)_64%)] fixed top-0 left-0 z-[90] flex h-screen w-full items-center justify-center bg-[#3b82f6] p-2 text-white xl:justify-between">
+    <div className="fixed top-0 left-0 z-[90] flex h-screen w-full items-center justify-center bg-[#0099ff] p-2 text-white xl:justify-between">
       <div className="relative mx-auto flex h-full w-full max-w-[1240px] flex-col justify-center">
         <div>
           <div className="relative flex max-w-fit flex-1 flex-col items-center">
@@ -113,8 +113,9 @@ const Footer = () => {
               </div>
             </div>
           </div>
-          <div className="mt-12 flex w-full justify-between gap-8 text-sm uppercase xl:mt-16">
-            <div className="flex flex-col items-center gap-8 text-[12px] tracking-wide">
+          <div className="mt-12 flex w-full justify-between gap-8 text-sm xl:mt-16">
+            <div className="flex flex-col items-start gap-6 text-[12px] tracking-wide">
+              <p className="text-xl font-bold uppercase">Socials</p>
               {socialLinks.map((item, i) => (
                 <LinkHoverUnderline
                   href={item.link}
@@ -125,14 +126,16 @@ const Footer = () => {
                 </LinkHoverUnderline>
               ))}
             </div>
-            <div className="flex flex-col items-center gap-8 text-[12px] tracking-wide">
+            <div className="flex flex-col items-start gap-6 text-[12px] tracking-wide">
+              <p className="text-xl font-bold uppercase">Contact</p>
+
               <Link
                 href="mailto:animesh.sharma.art@gmail.com"
                 className="md:text-base"
               >
-                Mail: animesh.sharma.art@gmail.com
+                animesh.sharma.art@gmail.com
               </Link>
-              <p className="md:text-base">Phone: 9840771756</p>
+              <p className="md:text-base">9840771756</p>
             </div>
           </div>
         </div>

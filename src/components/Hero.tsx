@@ -29,7 +29,7 @@ const Hero = () => {
   }, [isOverlayAnimComplete]);
 
   return (
-    <div className="relative min-h-screen w-full bg-[#fff6db] bg-gradient-to-b from-[#3b82f6] from-30% via-[#fff6db] via-90% xl:flex">
+    <div className="relative min-h-screen w-full bg-[#fff6db] bg-gradient-to-b from-[#0099ff] from-30% via-[#fff6db] via-90% xl:flex">
       <div className="flex flex-col items-center gap-6 p-4 xl:mt-20 xl:items-start xl:p-8 2xl:mt-24 2xl:items-center 2xl:gap-12">
         <div
           className={`mt-20 flex flex-col items-center text-white md:mt-30 xl:mt-20 xl:items-start 2xl:items-center`}

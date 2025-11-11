@@ -9,7 +9,7 @@ const MarqueeContent = ({ isOutlined = false }) => {
   const repetitions = 5;
   const textClasses = isOutlined
     ? "outline-text text-transparent opacity-50"
-    : "text-blue-500";
+    : "text-orange-500";
 
   return (
     <div className="flex w-max items-center gap-x-12 uppercase lg:gap-x-16">
@@ -78,7 +78,7 @@ const TitleMarquee = () => {
     >
       <div
         ref={leftMarqueeRef}
-        className="flex w-max gap-x-12 text-[2.4rem] font-extrabold tracking-wider text-nowrap text-blue-500 sm:text-6xl md:text-7xl lg:gap-x-16 lg:text-8xl xl:text-[7.8rem] 2xl:text-[11.7rem]"
+        className="flex w-max gap-x-12 text-[2.4rem] font-extrabold tracking-wider text-nowrap text-black sm:text-6xl md:text-7xl lg:gap-x-16 lg:text-8xl xl:text-[7.8rem] 2xl:text-[11.7rem]"
       >
         <MarqueeContent />
         <MarqueeContent />
