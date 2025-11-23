@@ -57,15 +57,10 @@ const IntroOverlay = () => {
   return (
     <div
       ref={overlayContainerRef}
-      className="fixed top-0 left-0 z-[999] flex h-dvh w-full items-center justify-center bg-[#396edd]"
+      className="fixed top-0 left-0 z-[999] flex h-dvh w-full items-center justify-center bg-[#0099ff]"
     >
       <div className="animesh-intro-logo relative h-[150px] w-[150px]">
-        <Image
-          src="/animesh-logo.jpg"
-          alt="logo"
-          fill
-          className="object-cover"
-        />
+        <Image src="/logo.png" alt="logo" fill className="object-contain" />
       </div>
       <p className="loading-text absolute bottom-8 left-1/2 -translate-x-1/2 text-9xl text-white 2xl:bottom-6 2xl:left-8 2xl:translate-0 2xl:text-[12rem]">
         {progress && Math.floor(progress)}
