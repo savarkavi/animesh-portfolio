@@ -31,7 +31,7 @@ const WorkCategoryContainer = ({ media }: CategoryMediaProps) => {
   const [focusedIndex, setFocusedIndex] = useState<number | null>(null);
   const draggablesRef = useRef<Draggable[]>([]);
   const originalPositionsRef = useRef<{
-    [key: number]: { x: number; y: number };
+    [key: number]: { top: string; left: string; x: number; y: number };
   }>({});
   const isMobile = useMediaQuery("(max-width: 1024px)", {
     initializeWithValue: false,
@@ -39,7 +39,7 @@ const WorkCategoryContainer = ({ media }: CategoryMediaProps) => {
 
   useEffect(() => {
     if (isMobile) return;
-    const SPREAD = 40;
+    const SPREAD = 150;
     const calculatedPositions = media.map((item) => {
       const top = Math.random() * (2 * SPREAD) + (50 - SPREAD);
       const left = Math.random() * (2 * SPREAD) + (50 - SPREAD);
@@ -66,7 +66,8 @@ const WorkCategoryContainer = ({ media }: CategoryMediaProps) => {
 
       const allItems = gsap.utils.toArray<HTMLImageElement>(".draggable-item");
 
-      gsap.set(allItems, { scale: 0.8 });
+      // <-- IMPORTANT: initialize numeric transforms so getProperty("x"/"y") is reliable
+      gsap.set(allItems, { scale: 0.8, x: 0, y: 0 });
 
       draggablesRef.current.forEach((d) => d.kill());
       draggablesRef.current = [];
@@ -109,6 +110,7 @@ const WorkCategoryContainer = ({ media }: CategoryMediaProps) => {
     { scope: boundsContainerRef, dependencies: [positionedMedia, isMobile] },
   );
 
+  // store top/left and numeric x/y so we can restore reliably
   const handleFocus = contextSafe((idx: number) => {
     setFocusedIndex(idx);
 
@@ -116,15 +118,29 @@ const WorkCategoryContainer = ({ media }: CategoryMediaProps) => {
     const targetItem = allItems[idx];
     const otherItems = allItems.filter((_, i) => i !== idx);
 
+    // Get computed top/left (these are the values we set earlier as percentages)
+    const computedStyle = window.getComputedStyle(targetItem);
+    const originalTop =
+      computedStyle.top || (targetItem as HTMLElement).style.top;
+    const originalLeft =
+      computedStyle.left || (targetItem as HTMLElement).style.left;
+
+    // GSAP transform values might be NaN initially if not set; fallback to 0
+    const originalX = Number(gsap.getProperty(targetItem, "x")) || 0;
+    const originalY = Number(gsap.getProperty(targetItem, "y")) || 0;
+
     originalPositionsRef.current[idx] = {
-      x: gsap.getProperty(targetItem, "x") as number,
-      y: gsap.getProperty(targetItem, "y") as number,
+      top: originalTop,
+      left: originalLeft,
+      x: originalX,
+      y: originalY,
     };
 
     if (draggablesRef.current[idx]) {
       draggablesRef.current[idx].disable();
     }
 
+    // Move the item visually to center - we set top/left to 50% and reset x/y
     gsap.to(targetItem, {
       top: "50%",
       left: "50%",
@@ -158,7 +174,10 @@ const WorkCategoryContainer = ({ media }: CategoryMediaProps) => {
     }
 
     if (targetItem && originalPosition) {
+      // Restore both top/left (percent values) and x/y (numeric GSAP transforms)
       gsap.to(targetItem, {
+        top: originalPosition.top,
+        left: originalPosition.left,
         x: originalPosition.x,
         y: originalPosition.y,
         scale: 0.8,
@@ -191,7 +210,7 @@ const WorkCategoryContainer = ({ media }: CategoryMediaProps) => {
       ref={boundsContainerRef}
       className="relative flex w-full items-center justify-center overflow-hidden bg-[#fff6db] bg-[linear-gradient(to_right,#0000001a_1px,transparent_1px),linear-gradient(to_bottom,#0000001a_1px,transparent_1px)] bg-[size:20px_20px] xl:h-screen"
     >
-      <div className="relative flex flex-col gap-12 px-4 py-28 lg:block lg:h-[600px] lg:w-[600px] lg:p-0">
+      <div className="relative flex flex-col gap-12 px-4 py-28 lg:block lg:h-[500px] lg:w-[500px] lg:p-0">
         {isMobile
           ? media.map((item, i) =>
               item.type === "image" ? (
@@ -201,7 +220,7 @@ const WorkCategoryContainer = ({ media }: CategoryMediaProps) => {
                   alt="image"
                   width={400}
                   height={400}
-                  className="object-contain"
+                  className="rounded-md object-contain"
                 />
               ) : (
                 <video
@@ -209,7 +228,7 @@ const WorkCategoryContainer = ({ media }: CategoryMediaProps) => {
                   src={item.src}
                   width={400}
                   height={400}
-                  className="object-contain"
+                  className="rounded-md object-contain"
                   loop
                   muted
                   autoPlay
@@ -224,8 +243,8 @@ const WorkCategoryContainer = ({ media }: CategoryMediaProps) => {
                   style={item.style}
                   src={item.src}
                   alt="image"
-                  width={600}
-                  height={600}
+                  width={500}
+                  height={500}
                   className={`draggable-item media-${i} absolute cursor-grab rounded-md object-contain active:cursor-grabbing`}
                   priority={true}
                   onClick={() => handleFocus(i)}
@@ -236,8 +255,8 @@ const WorkCategoryContainer = ({ media }: CategoryMediaProps) => {
                   style={item.style}
                   src={item.src}
                   onClick={() => handleFocus(i)}
-                  width={600}
-                  height={600}
+                  width={500}
+                  height={500}
                   className={`draggable-item media-${i} absolute cursor-grab rounded-md object-contain active:cursor-grabbing`}
                   loop
                   muted
