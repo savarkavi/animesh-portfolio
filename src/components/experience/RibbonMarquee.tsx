@@ -1,11 +1,11 @@
 "use client";
 
-import { adeDisplay } from "@/app/fonts/fonts";
+import { instrumentSerif } from "@/app/fonts/fonts";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import React, { useRef } from "react";
 
-const RibbonText = () => {
+const RibbonText = ({ text }: { text: string }) => {
   const repetitions = 15;
 
   return (
@@ -13,16 +13,16 @@ const RibbonText = () => {
       {Array.from({ length: repetitions }, (_, i) => (
         <p
           key={i}
-          className={`${adeDisplay.className} text-lg font-black tracking-wider text-white lg:text-2xl`}
+          className={`${instrumentSerif.className} text-xl font-black tracking-wider text-white lg:text-3xl`}
         >
-          Experience
+          {text}
         </p>
       ))}
     </div>
   );
 };
 
-const ExperienceRibbon = () => {
+const RibbonMarquee = ({ text }: { text: string }) => {
   const ribbonContainerRef = useRef<HTMLDivElement>(null);
 
   useGSAP(
@@ -64,13 +64,13 @@ const ExperienceRibbon = () => {
         ref={ribbonContainerRef}
         className="flex w-max gap-20 bg-[#f54a00] py-4 text-nowrap"
       >
-        <RibbonText />
-        <RibbonText />
+        <RibbonText text={text} />
+        <RibbonText text={text} />
       </div>
     </div>
   );
 };
 
-export default ExperienceRibbon;
+export default RibbonMarquee;
 
 // #6D28D9

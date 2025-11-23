@@ -7,6 +7,7 @@ import { MorphSVGPlugin } from "gsap/MorphSVGPlugin";
 import React, { useRef } from "react";
 import TitleMarquee from "./TitleMarquee";
 import FeaturedWorkSlider from "./FeaturedWorkSlider";
+import RibbonMarquee from "../experience/RibbonMarquee";
 
 gsap.registerPlugin(useGSAP, ScrollTrigger, MorphSVGPlugin);
 
@@ -43,7 +44,8 @@ const FeaturedWorkSection = () => {
       ref={containerRef}
       className="relative flex min-h-screen flex-col items-center bg-[#fff6db]"
     >
-      <TitleMarquee />
+      {/* <TitleMarquee /> */}
+      <RibbonMarquee text="Featured Work" />
       <div className="featured-work-content h-full w-full">
         <div className="wavy-svg relative h-[200px] w-full xl:h-[320px]">
           <svg
