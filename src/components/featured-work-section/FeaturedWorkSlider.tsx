@@ -14,8 +14,6 @@ const FeaturedWorkSlider = () => {
   const imagesRef = useRef<HTMLDivElement[]>([]);
   const activeIndexRef = useRef<number | null>(null);
 
-  // const [activeBgImage, setActiveBgImage] = useState<string | null>(null);
-
   const radius = 1000;
   const itemAngle = 360 / featuredWorkData.length;
 
@@ -37,7 +35,7 @@ const FeaturedWorkSlider = () => {
             trigger: containerRef.current,
             start: "top top",
             end: `+=${featuredWorkData.length * 500}`,
-            scrub: true,
+            scrub: 1,
             pin: true,
 
             onEnter: () => {
@@ -105,14 +103,13 @@ const FeaturedWorkSlider = () => {
             ref={(el) => {
               if (el) imagesRef.current[i] = el;
             }}
-            className="absolute flex h-full items-center"
+            className="absolute flex h-[600px] w-[500px] items-center"
           >
             <PreloadImage
               src={item.imgSrc}
               alt={item.label}
-              height={550}
-              width={550}
-              className="rounded-md object-contain"
+              fill
+              className="rounded-md object-cover"
             />
           </div>
         ))}
