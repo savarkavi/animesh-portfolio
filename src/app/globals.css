@@ -31,7 +31,7 @@ body {
 
 @media (min-width: 1280px) {
   .outline-text {
-    -webkit-text-stroke: 2px oklch(70.5% 0.213 47.604);
+    -webkit-text-stroke: 1px oklch(70.5% 0.213 47.604);
   }
 }
 
