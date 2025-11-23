@@ -1,4 +1,4 @@
-import { Zen_Old_Mincho } from "next/font/google";
+import { Zen_Old_Mincho, Instrument_Serif } from "next/font/google";
 import localFont from "next/font/local";
 
 export const electroharmonix = localFont({
@@ -18,4 +18,9 @@ export const zenOldMincho = Zen_Old_Mincho({
 
 export const adeDisplay = localFont({
   src: "./Ade-Display.otf",
+});
+
+export const instrumentSerif = Instrument_Serif({
+  subsets: ["latin"],
+  weight: ["400"],
 });

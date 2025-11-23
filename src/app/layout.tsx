@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Averia_Libre, Bricolage_Grotesque } from "next/font/google";
+import { Averia_Libre, DM_Sans } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -12,7 +12,7 @@ export const averiaLibre = Averia_Libre({
   weight: ["300", "400", "700"],
 });
 
-export const bricolage = Bricolage_Grotesque({
+export const dmSans = DM_Sans({
   subsets: ["latin"],
   weight: ["200", "300", "400", "500", "600", "700"],
 });
@@ -31,7 +31,7 @@ export default function RootLayout({
     <html lang="en">
       <MediaLoadingProvider>
         <ReactLenis root>
-          <body className={`${bricolage.className} antialiased`}>
+          <body className={`${dmSans.className} antialiased`}>
             <IntroOverlay />
             <div
               className="fixed top-0 left-0 z-[999] h-screen w-screen"

@@ -1,6 +1,6 @@
 "use client";
 
-import { adeDisplay } from "@/app/fonts/fonts";
+// import { adeDisplay } from "@/app/fonts/fonts";
 import React from "react";
 import { GiPolarStar } from "react-icons/gi";
 import TextAnimationWrapper from "./TextAnimationWrapper";
@@ -8,6 +8,7 @@ import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { useMediaLoading } from "@/context/MediaLoadingContext";
 import PreloadImage from "./PreloadImage";
+import { instrumentSerif } from "@/app/fonts/fonts";
 
 gsap.registerPlugin(useGSAP);
 
@@ -38,18 +39,18 @@ const Hero = () => {
             <div className="">
               <TextAnimationWrapper
                 text="Animesh"
-                className={`${adeDisplay.className} mt-8 scale-y-125 text-5xl uppercase lg:text-9xl xl:mt-0`}
+                className={`${instrumentSerif.className} mt-8 scale-y-125 text-6xl uppercase lg:text-[11rem] xl:mt-0`}
               />
             </div>
             <div className="">
               <TextAnimationWrapper
                 text="Sharma"
-                className={`${adeDisplay.className} scale-y-125 text-5xl uppercase lg:text-9xl xl:mt-0`}
+                className={`${instrumentSerif.className} scale-y-125 text-6xl uppercase lg:text-[11rem] xl:mt-0`}
               />
             </div>
           </div>
           <p
-            className={`${adeDisplay.className} hero-sub-text -translate-x-30 text-lg font-black tracking-widest uppercase opacity-0 2xl:text-5xl`}
+            className={`${instrumentSerif.className} hero-sub-text -translate-x-30 text-xl font-black tracking-widest uppercase opacity-0 2xl:text-5xl`}
           >
             Visual designer
           </p>
@@ -71,13 +72,15 @@ const Hero = () => {
             aesthetics, I aim to create visuals that connect, inspire, and
             provoke thought.
           </p>
-          <div className="animesh-logo absolute -top-8 -right-4 h-[70px] w-[70px] rounded-full">
-            <PreloadImage
-              src="/animesh-logo.jpg"
-              alt="logo"
-              fill
-              className="onject-cover rounded-full"
-            />
+          <div className="absolute -top-8 -right-4 rounded-full bg-[#0099ff] p-2">
+            <div className="animesh-logo relative h-[60px] w-[60px] rounded-full">
+              <PreloadImage
+                src="/logo.png"
+                alt="logo"
+                fill
+                className="onject-cover rounded-full"
+              />
+            </div>
           </div>
         </div>
       </div>

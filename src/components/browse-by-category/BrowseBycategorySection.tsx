@@ -2,6 +2,7 @@ import React from "react";
 import TextAnimationWrapper from "../TextAnimationWrapper";
 import CategoriesContainer from "./CategoriesContainer";
 import LinkHoverUnderline from "../LinkHoverUnderline";
+import { instrumentSerif } from "@/app/fonts/fonts";
 
 const BrowseBycategorySection = () => {
   return (
@@ -9,7 +10,7 @@ const BrowseBycategorySection = () => {
       <div className="flex flex-col items-center justify-between overflow-hidden px-12 md:flex-row">
         <TextAnimationWrapper
           text="Browse categories"
-          className="text-center text-4xl uppercase xl:text-7xl"
+          className={`${instrumentSerif.className} text-center text-4xl uppercase xl:text-8xl`}
         />
         <LinkHoverUnderline
           href="/work-archive"

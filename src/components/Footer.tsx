@@ -6,7 +6,7 @@ import gsap from "gsap";
 import Image from "next/image";
 import React, { useRef } from "react";
 import LinkHoverUnderline from "./LinkHoverUnderline";
-import { adeDisplay } from "@/app/fonts/fonts";
+import { instrumentSerif } from "@/app/fonts/fonts";
 import Link from "next/link";
 
 gsap.registerPlugin(useGSAP);
@@ -15,40 +15,31 @@ const Footer = () => {
   const imageRef = useRef<HTMLDivElement>(null);
 
   useGSAP(() => {
-    // Heartbeat animation (your original code)
     gsap
       .timeline({ repeat: -1, defaults: { duration: 0.8 } })
       .to(".heart-svg", { y: 20 })
       .to(".heart-svg", { y: 0 });
 
-    // --- NEW: Mouse move rotation logic ---
+    const maxRotate = 15;
 
-    const maxRotate = 15; // Maximum rotation in degrees
-
-    // Function to handle mouse movement
     const handleMouseMove = (event: MouseEvent) => {
       const { clientX, clientY } = event;
       const { innerWidth, innerHeight } = window;
 
-      // Calculate rotation values based on mouse position relative to the center of the screen
-      // The result is a value from -1 to 1, which we multiply by maxRotate
       const rotateY =
         ((clientX - innerWidth / 2) / (innerWidth / 2)) * maxRotate;
-      // We invert rotateX for a more natural feel (mouse up -> image tilts down)
       const rotateX =
         -((clientY - innerHeight / 2) / (innerHeight / 2)) * maxRotate;
 
-      // Animate the imageRef element with GSAP for a smooth effect
       gsap.to(imageRef.current, {
         rotateX: rotateX,
         rotateY: rotateY,
         ease: "power1.out",
         duration: 0.5,
-        transformPerspective: 500, // Adds depth to the 3D effect
+        transformPerspective: 500,
       });
     };
 
-    // Function to handle mouse leaving the window
     const handleMouseLeave = () => {
       gsap.to(imageRef.current, {
         rotateX: 0,
@@ -58,16 +49,14 @@ const Footer = () => {
       });
     };
 
-    // Add the event listeners
     window.addEventListener("mousemove", handleMouseMove);
     window.addEventListener("mouseleave", handleMouseLeave);
 
-    // Cleanup function to remove listeners when the component unmounts
     return () => {
       window.removeEventListener("mousemove", handleMouseMove);
       window.removeEventListener("mouseleave", handleMouseLeave);
     };
-  }, []); // Empty dependency array ensures this effect runs only once on mount
+  }, []);
 
   return (
     <div className="fixed top-0 left-0 z-[90] flex h-screen w-full items-center justify-center bg-[#0099ff] p-2 text-white xl:justify-between">
@@ -76,7 +65,7 @@ const Footer = () => {
           <div className="relative flex max-w-fit flex-1 flex-col items-center">
             <div className="flex h-full w-full flex-col items-center justify-between lg:flex-row">
               <p
-                className={`${adeDisplay.className} text-center text-7xl uppercase md:text-8xl xl:text-[12rem]`}
+                className={`${instrumentSerif.className} text-center text-7xl uppercase md:text-8xl xl:text-[17rem]`}
               >
                 Animesh
               </p>
@@ -86,10 +75,10 @@ const Footer = () => {
                 style={{ transformStyle: "preserve-3d" }}
               >
                 <Image
-                  src="/footer-logo.png"
+                  src="/logo.png"
                   alt="logo"
                   fill
-                  className="object-cover"
+                  className="object-contain"
                 />
               </div>
             </div>
