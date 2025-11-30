@@ -1,5 +1,6 @@
 "use client";
 
+import { instrumentSerif } from "@/app/fonts/fonts";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/all";
@@ -53,7 +54,7 @@ const PageTitle = () => {
       className="relative flex h-screen w-full items-end overflow-hidden bg-[#fff6db]"
     >
       <div
-        className={`absolute mt-32 flex h-[calc(100vh-80px)] w-full flex-col justify-start gap-8 overflow-hidden text-center font-bold text-blue-400 uppercase xl:mt-0 xl:justify-end xl:gap-10`}
+        className={`absolute mt-30 flex h-[calc(100vh-80px)] w-full flex-col justify-start gap-6 overflow-hidden text-center font-bold text-blue-400 uppercase xl:mt-0 xl:justify-end xl:gap-10`}
       >
         {Array.from({ length: 7 }, (_, i) => (
           <div
@@ -73,7 +74,9 @@ const PageTitle = () => {
           </div>
         ))}
       </div>
-      <p className="archive-text absolute top-1/2 right-1/2 mb-20 translate-x-1/2 -translate-y-1/2 scale-y-250 text-6xl uppercase lg:text-7xl 2xl:top-auto 2xl:right-8 2xl:bottom-8 2xl:translate-0 2xl:text-[11rem]">
+      <p
+        className={`${instrumentSerif.className} archive-text absolute top-1/2 right-1/2 mb-12 translate-x-1/2 -translate-y-1/2 scale-y-220 text-8xl uppercase lg:text-9xl 2xl:top-auto 2xl:right-8 2xl:bottom-8 2xl:translate-0 2xl:text-[13rem]`}
+      >
         archive
       </p>
     </div>

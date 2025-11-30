@@ -50,7 +50,7 @@ const Hero = () => {
             </div>
           </div>
           <p
-            className={`${instrumentSerif.className} hero-sub-text -translate-x-30 text-xl font-black tracking-widest uppercase opacity-0 2xl:text-5xl`}
+            className={`${instrumentSerif.className} hero-sub-text -translate-x-30 text-xl font-black tracking-widest uppercase opacity-0 2xl:text-6xl`}
           >
             Visual designer
           </p>
@@ -72,7 +72,7 @@ const Hero = () => {
             aesthetics, I aim to create visuals that connect, inspire, and
             provoke thought.
           </p>
-          <div className="absolute -top-8 -right-4 rounded-full bg-[#0099ff] p-2">
+          <div className="absolute -top-8 -right-4 rounded-full bg-orange-500 p-2">
             <div className="animesh-logo relative h-[60px] w-[60px] rounded-full">
               <PreloadImage
                 src="/logo.png"
