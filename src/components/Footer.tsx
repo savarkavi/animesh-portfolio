@@ -59,19 +59,30 @@ const Footer = () => {
   }, []);
 
   return (
-    <div className="fixed top-0 left-0 z-[90] flex h-screen w-full items-center justify-center bg-[#0099ff] p-2 text-white xl:justify-between">
-      <div className="relative mx-auto flex h-full w-full max-w-[1240px] flex-col justify-center">
-        <div>
-          <div className="relative flex max-w-fit flex-1 flex-col items-center">
-            <div className="flex h-full w-full flex-col items-center justify-between lg:flex-row">
+    <div className="fixed top-0 left-0 z-[90] flex h-screen w-full items-center justify-center bg-[#0099ff] px-4 text-white xl:justify-between">
+      <div className="relative mx-auto flex h-full w-full max-w-[1024px] flex-col justify-center">
+        <div className="w-full">
+          <div className="relative flex w-full flex-1 flex-col items-center">
+            <div className="flex h-full w-fit flex-col items-center justify-between leading-24 sm:leading-normal lg:flex-row">
               <p
-                className={`${instrumentSerif.className} text-center text-7xl uppercase md:text-8xl xl:text-[17rem]`}
+                className={`${instrumentSerif.className} text-[5rem] text-nowrap uppercase sm:text-9xl xl:text-[15rem]`}
               >
-                Animesh
+                Thank You
               </p>
+            </div>
+
+            <div className="flex w-full items-center justify-center gap-2 xl:justify-between xl:gap-3">
+              {"for visiting !".split(" ").map((item, i) => (
+                <p
+                  key={i}
+                  className="ml-3 text-[2.5rem] leading-10 sm:text-[5rem] xl:text-[9rem]"
+                >
+                  {item}
+                </p>
+              ))}
               <div
                 ref={imageRef}
-                className="relative -mt-2 h-[100px] w-[100px] lg:h-[200px] lg:w-full"
+                className="relative -mt-2 h-[50px] w-[100px] lg:h-[130px] lg:w-full"
                 style={{ transformStyle: "preserve-3d" }}
               >
                 <Image
@@ -79,25 +90,6 @@ const Footer = () => {
                   alt="logo"
                   fill
                   className="object-contain"
-                />
-              </div>
-            </div>
-
-            <div className="flex w-full items-center justify-center gap-4 xl:justify-between">
-              {"Thank you for visiting".split(" ").map((item, i) => (
-                <p
-                  key={i}
-                  className="text-xl leading-10 uppercase md:text-2xl xl:text-8xl"
-                >
-                  {item}
-                </p>
-              ))}
-              <div className="heart-svg relative h-[30px] w-[30px] md:h-[60px] md:w-[60px]">
-                <Image
-                  src="/heart-svgrepo-com (2).svg"
-                  alt="heart svg"
-                  fill
-                  className="object-cover"
                 />
               </div>
             </div>

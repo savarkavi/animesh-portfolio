@@ -103,7 +103,7 @@ const FeaturedWorkSlider = () => {
             ref={(el) => {
               if (el) imagesRef.current[i] = el;
             }}
-            className="absolute flex h-[600px] w-[500px] items-center"
+            className="absolute flex h-[500px] w-[400px] items-center md:h-[600px] md:w-[500px]"
           >
             <PreloadImage
               src={item.imgSrc}
