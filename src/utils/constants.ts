@@ -134,6 +134,14 @@ export const workExperienceData = [
       "I drew a series of illustrations for music playlist covers, each a unique reflection of the musical journey it represents.",
     imgSrc: "/gully-gang-img1.webp",
   },
+  {
+    company: "5.5 Records",
+    role: "Lead Graphic and Creative Designer",
+    type: "Freelance",
+    description:
+      "Designed merchandise, album covers, social media posts, motion graphics and edited reels, music videos etc.",
+    imgSrc: "/gully-gang-img1.webp",
+  },
 ];
 
 export const workCategoriesData = [
