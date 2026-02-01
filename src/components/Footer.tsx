@@ -116,12 +116,11 @@ const Footer = () => {
               >
                 animesh.sharma.art@gmail.com
               </Link>
-              <p className="md:text-base">9840771756</p>
             </div>
           </div>
         </div>
         <p className="absolute bottom-4 z-10 uppercase">
-          © Copyright Animesh 2025
+          © Copyright Animesh 2026
         </p>
       </div>
     </div>

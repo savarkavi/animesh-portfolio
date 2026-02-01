@@ -64,13 +64,11 @@ const Hero = () => {
           <p
             className={`text-center font-semibold text-black md:text-xl xl:text-base 2xl:text-xl`}
           >
-            Hi! I’m a digital artist passionate about bringing imagination to
-            life through pixels and color. My work blends creativity with
-            storytelling, capturing emotion and atmosphere in every
-            piece—whether it&apos;s character design, concept art, or surreal
-            landscapes. Inspired by both the natural world and futuristic
-            aesthetics, I aim to create visuals that connect, inspire, and
-            provoke thought.
+            Hi, I&apos;m Animesh, a 24-year-old visual designer based in Shimla.
+            I&apos;ve been working as visual designer for more than 5 years now
+            and I&apos;ve spent the past year leading design for a music label.
+            I&apos;m currently exploring new opportunities and creative
+            challenges.
           </p>
           <div className="absolute -top-8 -right-4 rounded-full bg-orange-500 p-2">
             <div className="animesh-logo relative h-[60px] w-[60px] rounded-full">
