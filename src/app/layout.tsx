@@ -6,6 +6,7 @@ import Footer from "@/components/Footer";
 import ReactLenis from "lenis/react";
 import IntroOverlay from "@/components/IntroOverlay";
 import { MediaLoadingProvider } from "@/context/MediaLoadingContext";
+import ScrollToTop from "@/components/ScrollToTop";
 
 export const averiaLibre = Averia_Libre({
   subsets: ["latin"],
@@ -45,6 +46,7 @@ export default function RootLayout({
             <div className="relative z-[99]">
               <Header />
               {children}
+              <ScrollToTop />
             </div>
             <div className="-z-10 h-screen"></div>
             <Footer />
