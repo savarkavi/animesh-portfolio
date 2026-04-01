@@ -65,9 +65,9 @@ const Hero = () => {
             className={`text-center font-semibold text-black md:text-xl xl:text-base 2xl:text-xl`}
           >
             Hi, I&apos;m Animesh, a 24-year-old visual designer based in Shimla.
-            I&apos;ve been working as visual designer for more than 5 years now
-            and I&apos;ve spent the past year leading design for a music label.
-            I&apos;m currently exploring new opportunities and creative
+            I&apos;ve been working as a visual designer for more than 5 years
+            now and I&apos;ve spent the past year leading design for a music
+            label. I&apos;m currently exploring new opportunities and creative
             challenges.
           </p>
           <div className="absolute -top-8 -right-4 rounded-full bg-orange-500 p-2">

@@ -31,7 +31,13 @@ const WorkCategoryContainer = ({ media }: CategoryMediaProps) => {
   const [focusedIndex, setFocusedIndex] = useState<number | null>(null);
   const draggablesRef = useRef<Draggable[]>([]);
   const originalPositionsRef = useRef<{
-    [key: number]: { top: string; left: string; x: number; y: number };
+    [key: number]: {
+      top: string;
+      left: string;
+      x: number;
+      y: number;
+      rotation: number;
+    };
   }>({});
   const isMobile = useMediaQuery("(max-width: 1024px)", {
     initializeWithValue: false,
@@ -39,7 +45,7 @@ const WorkCategoryContainer = ({ media }: CategoryMediaProps) => {
 
   useEffect(() => {
     if (isMobile) return;
-    const SPREAD = 150;
+    const SPREAD = 200;
     const calculatedPositions = media.map((item) => {
       const top = Math.random() * (2 * SPREAD) + (50 - SPREAD);
       const left = Math.random() * (2 * SPREAD) + (50 - SPREAD);
@@ -67,7 +73,12 @@ const WorkCategoryContainer = ({ media }: CategoryMediaProps) => {
       const allItems = gsap.utils.toArray<HTMLImageElement>(".draggable-item");
 
       // <-- IMPORTANT: initialize numeric transforms so getProperty("x"/"y") is reliable
-      gsap.set(allItems, { scale: 0.8, x: 0, y: 0 });
+      gsap.set(allItems, {
+        scale: 0.8,
+        x: 0,
+        y: 0,
+        rotation: () => Math.random() * 30 - 15,
+      });
 
       draggablesRef.current.forEach((d) => d.kill());
       draggablesRef.current = [];
@@ -128,12 +139,15 @@ const WorkCategoryContainer = ({ media }: CategoryMediaProps) => {
     // GSAP transform values might be NaN initially if not set; fallback to 0
     const originalX = Number(gsap.getProperty(targetItem, "x")) || 0;
     const originalY = Number(gsap.getProperty(targetItem, "y")) || 0;
+    const originalRotation =
+      Number(gsap.getProperty(targetItem, "rotation")) || 0;
 
     originalPositionsRef.current[idx] = {
       top: originalTop,
       left: originalLeft,
       x: originalX,
       y: originalY,
+      rotation: originalRotation,
     };
 
     if (draggablesRef.current[idx]) {
@@ -146,6 +160,7 @@ const WorkCategoryContainer = ({ media }: CategoryMediaProps) => {
       left: "50%",
       x: 0,
       y: 0,
+      rotation: 0,
       scale: 1,
       duration: 0.5,
       ease: "power3.inOut",
@@ -180,6 +195,7 @@ const WorkCategoryContainer = ({ media }: CategoryMediaProps) => {
         left: originalPosition.left,
         x: originalPosition.x,
         y: originalPosition.y,
+        rotation: originalPosition.rotation,
         scale: 0.8,
         duration: 0.5,
         ease: "power3.inOut",
@@ -220,7 +236,7 @@ const WorkCategoryContainer = ({ media }: CategoryMediaProps) => {
                   alt="image"
                   width={400}
                   height={400}
-                  className="rounded-md object-contain"
+                  className="rounded-md object-contain shadow-lg"
                 />
               ) : (
                 <video
@@ -228,7 +244,7 @@ const WorkCategoryContainer = ({ media }: CategoryMediaProps) => {
                   src={item.src}
                   width={400}
                   height={400}
-                  className="rounded-md object-contain"
+                  className="rounded-md object-contain shadow-lg"
                   loop
                   muted
                   autoPlay
@@ -245,7 +261,7 @@ const WorkCategoryContainer = ({ media }: CategoryMediaProps) => {
                   alt="image"
                   width={500}
                   height={500}
-                  className={`draggable-item media-${i} absolute cursor-grab rounded-md object-contain active:cursor-grabbing`}
+                  className={`draggable-item media-${i} absolute cursor-grab rounded-md object-contain shadow-lg active:cursor-grabbing`}
                   priority={true}
                   onClick={() => handleFocus(i)}
                 />
@@ -257,7 +273,7 @@ const WorkCategoryContainer = ({ media }: CategoryMediaProps) => {
                   onClick={() => handleFocus(i)}
                   width={500}
                   height={500}
-                  className={`draggable-item media-${i} absolute cursor-grab rounded-md object-contain active:cursor-grabbing`}
+                  className={`draggable-item media-${i} absolute cursor-grab rounded-md object-contain shadow-lg active:cursor-grabbing`}
                   loop
                   muted
                   autoPlay

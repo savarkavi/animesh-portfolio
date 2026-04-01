@@ -32,7 +32,7 @@ const TextAnimationWrapper: React.FC<AnimatedTextProps> = ({
           })
           .to(".text-letter", {
             y: 0,
-            duration: 0.5,
+            duration: 0.4,
             stagger: 0.1,
           });
       }
