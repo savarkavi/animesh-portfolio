@@ -44,26 +44,22 @@ export const featuredWorkData = [
 export const socialLinks = [
   {
     name: "Instagram",
-    content: "@animesh_sesnsie",
     link: "https://www.instagram.com/animesh_sensei",
   },
-  // {
-  //   name: "Youtube",
-  //   content: "@animesh_sesnsie",
-  //   link: "/",
-  // },
   {
     name: "Behance",
-    content: "@animesh_sesnsie",
     link: "https://behance.net/animeshsharma5",
+  },
+  {
+    name: "LinkedIn",
+    link: "https://www.linkedin.com/in/animesh-sharma-b82284314/",
   },
 ];
 
 export const headerItems = [
   { id: 1, label: "Home", link: "/" },
   { id: 2, label: "Works", link: "/work-archive" },
-  // { id: 3, label: "About", link: "/about" },
-  { id: 4, label: "Contact", link: "mailto:animesh.sharma.art@gmail.com" },
+  { id: 4, label: "Contact", link: "/contact" },
 ];
 
 export const brandsData = [
@@ -103,11 +99,19 @@ export const workExperienceData = [
     imgSrc: "/sony-music-img.webp",
   },
   {
-    company: "Garudda Music",
+    company: "5.5 Records",
+    role: "Lead Graphic and Creative Designer",
+    type: "Freelance",
+    description:
+      "Designed merchandise, album covers, social media posts, motion graphics and edited reels, music videos etc.",
+    imgSrc: "/gully-gang-img1.webp",
+  },
+  {
+    company: "Garuddaa Music",
     role: "Video Editor / Animator",
     type: "Freelance",
     description:
-      "Designed a diverse array if multimedia, including captivating lyric videos, instagram reels and animations.",
+      "Designed a diverse array of multimedia, including captivating lyric videos, instagram reels and animations.",
     imgSrc: "/garuudaa-music-img.jpg",
   },
   {
@@ -132,14 +136,6 @@ export const workExperienceData = [
     type: "Freelance",
     description:
       "I drew a series of illustrations for music playlist covers, each a unique reflection of the musical journey it represents.",
-    imgSrc: "/gully-gang-img1.webp",
-  },
-  {
-    company: "5.5 Records",
-    role: "Lead Graphic and Creative Designer",
-    type: "Freelance",
-    description:
-      "Designed merchandise, album covers, social media posts, motion graphics and edited reels, music videos etc.",
     imgSrc: "/gully-gang-img1.webp",
   },
 ];
