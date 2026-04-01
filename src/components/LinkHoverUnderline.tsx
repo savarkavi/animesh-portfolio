@@ -9,12 +9,14 @@ interface LinkHoverUnderlineProps {
   href: string;
   children: React.ReactNode;
   className?: string;
+  target?: string;
 }
 
 const LinkHoverUnderline: React.FC<LinkHoverUnderlineProps> = ({
   href,
   children,
   className = "",
+  target,
 }) => {
   const underlineRef = useRef<HTMLDivElement>(null);
   const linkRef = useRef<HTMLAnchorElement>(null);
@@ -54,6 +56,7 @@ const LinkHoverUnderline: React.FC<LinkHoverUnderlineProps> = ({
       href={href}
       ref={linkRef}
       className={`relative inline-block ${className}`}
+      target={target}
     >
       {children}
       <div
