@@ -1,6 +1,6 @@
 "use client";
 
-import { socialLinks } from "@/utils/constants";
+import { headerItems, socialLinks } from "@/utils/constants";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import Image from "next/image";
@@ -62,7 +62,7 @@ const Footer = () => {
     <div className="fixed top-0 left-0 z-[90] flex h-screen w-full items-center justify-center bg-[#0099ff] px-4 text-white xl:justify-between">
       <div className="relative mx-auto flex h-full w-full max-w-[1024px] flex-col justify-center">
         <div className="w-full">
-          <div className="relative flex w-full flex-1 flex-col items-center">
+          <div className="relative flex w-full flex-1 flex-col items-center border-b pb-16">
             <div className="flex h-full w-fit flex-col items-center justify-between leading-24 sm:leading-normal lg:flex-row">
               <p
                 className={`${instrumentSerif.className} text-[5rem] text-nowrap uppercase sm:text-9xl xl:text-[15rem]`}
@@ -70,7 +70,6 @@ const Footer = () => {
                 Thank You
               </p>
             </div>
-
             <div className="flex w-full items-center justify-center gap-2 xl:justify-between xl:gap-3">
               {"for visiting !".split(" ").map((item, i) => (
                 <p
@@ -94,20 +93,36 @@ const Footer = () => {
               </div>
             </div>
           </div>
-          <div className="mt-12 flex w-full justify-between gap-8 text-sm xl:mt-16">
-            <div className="flex flex-col items-start gap-6 text-[12px] tracking-wide">
-              <p className="text-xl font-bold uppercase">Socials</p>
-              {socialLinks.map((item, i) => (
-                <LinkHoverUnderline
-                  href={item.link}
-                  key={i}
-                  className="w-fit md:text-base"
-                >
-                  {item.name}
-                </LinkHoverUnderline>
-              ))}
+          <div className="mt-12 flex w-full flex-wrap justify-between gap-8 px-4 text-sm lg:gap-30 xl:mt-16">
+            <div className="flex gap-30">
+              <div className="flex flex-col items-start gap-3 text-[12px] tracking-wide">
+                <p className="text-xl font-bold uppercase">Links</p>
+                {headerItems.map((item, i) => (
+                  <LinkHoverUnderline
+                    href={item.link}
+                    key={i}
+                    className="w-fit md:text-base"
+                  >
+                    {item.label}
+                  </LinkHoverUnderline>
+                ))}
+              </div>
+              <div className="flex flex-col items-start gap-3 text-[12px] tracking-wide">
+                <p className="text-xl font-bold uppercase">Socials</p>
+                {socialLinks.map((item, i) => (
+                  <LinkHoverUnderline
+                    href={item.link}
+                    key={i}
+                    className="w-fit md:text-base"
+                    target="_blank"
+                  >
+                    {item.name}
+                  </LinkHoverUnderline>
+                ))}
+              </div>
             </div>
-            <div className="flex flex-col items-start gap-6 text-[12px] tracking-wide">
+
+            <div className="flex flex-col items-start gap-3 text-[12px] tracking-wide">
               <p className="text-xl font-bold uppercase">Contact</p>
 
               <Link
