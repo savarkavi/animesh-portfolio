@@ -2,7 +2,6 @@
 
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
-import { instrumentSerif } from "@/app/fonts/fonts";
 
 gsap.registerPlugin(useGSAP);
 
@@ -14,9 +13,7 @@ const ContactPage = () => {
   return (
     <div className="relative flex min-h-screen w-full flex-col items-center justify-center bg-[#fff6db] bg-gradient-to-b from-[#0099ff] from-30% via-[#fff6db] via-90% p-4 pt-24 pb-20 xl:pt-32">
       <div className="z-[1] flex w-full max-w-[800px] flex-col items-center gap-12">
-        <h1
-          className={`${instrumentSerif.className} text-center text-6xl text-white uppercase md:text-8xl`}
-        >
+        <h1 className={`text-center text-6xl text-white uppercase lg:text-7xl`}>
           Contact
         </h1>
 

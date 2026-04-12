@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Averia_Libre, DM_Sans } from "next/font/google";
+import { Inter_Tight } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -8,14 +8,9 @@ import IntroOverlay from "@/components/IntroOverlay";
 import { MediaLoadingProvider } from "@/context/MediaLoadingContext";
 import ScrollToTop from "@/components/ScrollToTop";
 
-export const averiaLibre = Averia_Libre({
+export const interTight = Inter_Tight({
   subsets: ["latin"],
-  weight: ["300", "400", "700"],
-});
-
-export const dmSans = DM_Sans({
-  subsets: ["latin"],
-  weight: ["200", "300", "400", "500", "600", "700"],
+  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
 });
 
 export const metadata: Metadata = {
@@ -32,7 +27,7 @@ export default function RootLayout({
     <html lang="en">
       <MediaLoadingProvider>
         <ReactLenis root>
-          <body className={`${dmSans.className} antialiased`}>
+          <body className={`${interTight.className} antialiased`}>
             <IntroOverlay />
             <div
               className="fixed top-0 left-0 z-[999] h-screen w-screen"

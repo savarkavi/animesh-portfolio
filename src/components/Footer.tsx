@@ -6,7 +6,6 @@ import gsap from "gsap";
 import Image from "next/image";
 import React, { useRef } from "react";
 import LinkHoverUnderline from "./LinkHoverUnderline";
-import { instrumentSerif } from "@/app/fonts/fonts";
 import Link from "next/link";
 
 gsap.registerPlugin(useGSAP);
@@ -65,23 +64,23 @@ const Footer = () => {
           <div className="relative flex w-full flex-1 flex-col items-center border-b pb-16">
             <div className="flex h-full w-fit flex-col items-center justify-between leading-24 sm:leading-normal lg:flex-row">
               <p
-                className={`${instrumentSerif.className} text-[5rem] text-nowrap uppercase sm:text-9xl xl:text-[15rem]`}
+                className={`text-6xl font-bold text-nowrap uppercase sm:text-8xl xl:text-[11rem]`}
               >
                 Thank You
               </p>
             </div>
-            <div className="flex w-full items-center justify-center gap-2 xl:justify-between xl:gap-3">
+            <div className="mt-3 flex w-full items-center justify-center gap-2 xl:gap-3">
               {"for visiting !".split(" ").map((item, i) => (
                 <p
                   key={i}
-                  className="ml-3 text-[2.5rem] leading-10 sm:text-[5rem] xl:text-[9rem]"
+                  className="ml-3 text-[2.5rem] leading-10 sm:text-6xl xl:text-9xl"
                 >
                   {item}
                 </p>
               ))}
               <div
                 ref={imageRef}
-                className="relative -mt-2 h-[50px] w-[100px] lg:h-[130px] lg:w-full"
+                className="relative -mt-2 h-[50px] w-[50px] sm:h-[100px] sm:w-[100px] xl:h-[120px] xl:w-[120px]"
                 style={{ transformStyle: "preserve-3d" }}
               >
                 <Image

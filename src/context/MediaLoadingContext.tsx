@@ -5,7 +5,6 @@ import {
   ReactNode,
   useCallback,
   useContext,
-  useEffect,
   useState,
 } from "react";
 
@@ -23,39 +22,19 @@ const MediaLoadingContext = createContext<MediaLoadingContextType | undefined>(
 );
 
 export const MediaLoadingProvider = ({ children }: { children: ReactNode }) => {
-  const [totalMedia, setTotalMedia] = useState(0);
-  const [loadedMedia, setLoadedMedia] = useState(0);
-  const [allLoaded, setAllLoaded] = useState(false);
   const [isOverlayAnimComplete, setIsOverlayAnimComplete] = useState(false);
 
-  const registerMedia = useCallback(() => {
-    setTotalMedia((prev) => prev + 1);
-  }, []);
-
-  const mediaLoaded = useCallback(() => {
-    setLoadedMedia((prev) => prev + 1);
-  }, []);
-
+  const registerMedia = useCallback(() => {}, []);
+  const mediaLoaded = useCallback(() => {}, []);
   const setOverlayAnimComplete = useCallback(() => {
     setIsOverlayAnimComplete(true);
   }, []);
 
-  const progress =
-    totalMedia > 0 ? (loadedMedia / totalMedia) * 100 : undefined;
-
-  useEffect(() => {
-    if (loadedMedia === totalMedia) {
-      setTimeout(() => {
-        setAllLoaded(true);
-      }, 1000);
-    }
-  }, [loadedMedia, totalMedia]);
-
   return (
     <MediaLoadingContext.Provider
       value={{
-        progress,
-        allLoaded,
+        progress: undefined,
+        allLoaded: true,
         registerMedia,
         mediaLoaded,
         setOverlayAnimComplete,

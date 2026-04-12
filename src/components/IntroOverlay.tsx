@@ -10,7 +10,7 @@ gsap.registerPlugin(useGSAP);
 
 const IntroOverlay = () => {
   const overlayContainerRef = useRef<HTMLDivElement>(null);
-  const { progress, allLoaded, setOverlayAnimComplete } = useMediaLoading();
+  const { setOverlayAnimComplete } = useMediaLoading();
   const [isAnimationComplete, setIsAnimationComplete] = useState(false);
 
   useGSAP(
@@ -23,31 +23,29 @@ const IntroOverlay = () => {
         ease: "easeInOut",
       });
 
-      if (allLoaded) {
-        const tl = gsap.timeline({
-          onComplete: () => {
-            setIsAnimationComplete(true);
-            setOverlayAnimComplete();
-          },
-        });
+      const tl = gsap.timeline({
+        delay: 3,
+        onComplete: () => {
+          setIsAnimationComplete(true);
+          setOverlayAnimComplete();
+        },
+      });
 
-        tl.to(".animesh-intro-logo, .loading-text", {
-          duration: 0.5,
-          opacity: 0,
-          ease: "power2.in",
-        }).to(
-          overlayContainerRef.current,
-          {
-            duration: 0.8,
-            yPercent: -100,
-            ease: "power2.inOut",
-          },
-          "-=0.2",
-        );
-      }
+      tl.to(".animesh-intro-logo", {
+        duration: 0.5,
+        opacity: 0,
+        ease: "power2.in",
+      }).to(
+        overlayContainerRef.current,
+        {
+          duration: 0.8,
+          yPercent: -100,
+          ease: "power2.inOut",
+        },
+        "-=0.2",
+      );
     },
-
-    { scope: overlayContainerRef, dependencies: [allLoaded] },
+    { scope: overlayContainerRef, dependencies: [] },
   );
 
   if (isAnimationComplete) {
@@ -62,9 +60,6 @@ const IntroOverlay = () => {
       <div className="animesh-intro-logo relative h-[150px] w-[150px]">
         <Image src="/logo.png" alt="logo" fill className="object-contain" />
       </div>
-      <p className="loading-text absolute bottom-8 left-1/2 -translate-x-1/2 text-9xl text-white 2xl:bottom-6 2xl:left-8 2xl:translate-0 2xl:text-[12rem]">
-        {progress && Math.floor(progress)}
-      </p>
     </div>
   );
 };

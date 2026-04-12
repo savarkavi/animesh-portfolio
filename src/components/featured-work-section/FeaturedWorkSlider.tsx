@@ -130,7 +130,7 @@ const FeaturedWorkSlider = () => {
         </div>
         <p
           ref={numberRef}
-          className="w-fit shrink-0 text-2xl tabular-nums lg:text-8xl"
+          className="w-fit shrink-0 text-2xl tabular-nums lg:text-6xl 2xl:text-8xl"
         >
           01
         </p>

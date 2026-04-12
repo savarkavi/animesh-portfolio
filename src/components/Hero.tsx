@@ -1,6 +1,5 @@
 "use client";
 
-// import { adeDisplay } from "@/app/fonts/fonts";
 import React from "react";
 import { GiPolarStar } from "react-icons/gi";
 import TextAnimationWrapper from "./TextAnimationWrapper";
@@ -8,7 +7,6 @@ import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { useMediaLoading } from "@/context/MediaLoadingContext";
 import PreloadImage from "./PreloadImage";
-import { instrumentSerif } from "@/app/fonts/fonts";
 
 gsap.registerPlugin(useGSAP);
 
@@ -33,24 +31,24 @@ const Hero = () => {
     <div className="relative min-h-screen w-full bg-[#fff6db] bg-gradient-to-b from-[#0099ff] from-30% via-[#fff6db] via-90% xl:flex">
       <div className="flex flex-col items-center gap-6 p-4 xl:mt-20 xl:items-start xl:p-8 2xl:mt-24 2xl:items-center 2xl:gap-12">
         <div
-          className={`mt-20 flex flex-col items-center text-white md:mt-30 xl:mt-20 xl:items-start 2xl:items-center`}
+          className={`mt-20 flex flex-col items-center text-white md:mt-30 xl:mt-20 2xl:items-center`}
         >
-          <div className="flex flex-col items-center justify-start text-center text-wrap xl:items-start 2xl:flex-row 2xl:gap-12">
-            <div className="">
+          <div className="flex flex-col items-center justify-start text-center text-wrap 2xl:flex-row 2xl:gap-12">
+            <div>
               <TextAnimationWrapper
                 text="Animesh"
-                className={`${instrumentSerif.className} mt-8 scale-y-125 text-6xl uppercase lg:text-[11rem] xl:mt-0`}
+                className={`mt-8 scale-y-125 text-6xl font-bold uppercase sm:text-8xl xl:mt-0 xl:text-9xl`}
               />
             </div>
-            <div className="">
+            <div>
               <TextAnimationWrapper
                 text="Sharma"
-                className={`${instrumentSerif.className} scale-y-125 text-6xl uppercase lg:text-[11rem] xl:mt-0`}
+                className={`scale-y-125 text-6xl font-bold uppercase sm:text-8xl xl:mt-0 xl:text-9xl`}
               />
             </div>
           </div>
           <p
-            className={`${instrumentSerif.className} hero-sub-text -translate-x-30 text-xl font-black tracking-widest uppercase opacity-0 2xl:text-6xl`}
+            className={`hero-sub-text mt-2 -translate-x-30 text-center text-xl font-black tracking-widest uppercase opacity-0 2xl:text-4xl`}
           >
             Visual designer
           </p>
@@ -82,12 +80,12 @@ const Hero = () => {
           </div>
         </div>
       </div>
-      <div className="absolute top-0 right-0 hidden h-full w-[750px] xl:block">
+      <div className="absolute right-0 bottom-0 hidden h-full w-[800px] xl:block">
         <PreloadImage
           src="/ani-portrait.png"
           alt="image"
           fill
-          className="animesh-portrait translate-y-20 object-cover opacity-0"
+          className="animesh-portrait object-cover opacity-0"
         />
       </div>
     </div>

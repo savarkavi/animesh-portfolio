@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@fontsource/inter-tight": "^5.2.7",
     "@gsap/react": "^2.1.2",
     "@lottiefiles/dotlottie-react": "^0.14.4",
     "@tsparticles/engine": "^3.9.1",

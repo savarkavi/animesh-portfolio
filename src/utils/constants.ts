@@ -171,11 +171,6 @@ export const workCategoriesData = [
 
         src: "https://wpyy1h42p2.ufs.sh/f/ieAAD0sTR7aJSU3C2TtY9xg2WEAquZnKOP1GmTVUvwLphMRH",
       },
-      {
-        type: "image",
-
-        src: "https://wpyy1h42p2.ufs.sh/f/ieAAD0sTR7aJsmGqu8h3AVSagd7tm8xcB6yNWznYpUP9LRrf",
-      },
     ],
   },
   {
@@ -414,10 +409,6 @@ export const workCategoriesData = [
     label: "Typography",
     coverImg: "/typography-img.webp",
     media: [
-      {
-        type: "image",
-        src: "https://wpyy1h42p2.ufs.sh/f/ieAAD0sTR7aJyc1mkjieqvJiZP7LGox15XKSnQ8tDYuHEFkz",
-      },
       {
         type: "image",
 

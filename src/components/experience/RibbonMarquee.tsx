@@ -1,6 +1,5 @@
 "use client";
 
-import { instrumentSerif } from "@/app/fonts/fonts";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import React, { useRef } from "react";
@@ -13,7 +12,7 @@ const RibbonText = ({ text }: { text: string }) => {
       {Array.from({ length: repetitions }, (_, i) => (
         <p
           key={i}
-          className={`${instrumentSerif.className} text-xl font-black tracking-wider text-white lg:text-3xl`}
+          className={`text-xl font-black tracking-wider text-white lg:text-3xl`}
         >
           {text}
         </p>
