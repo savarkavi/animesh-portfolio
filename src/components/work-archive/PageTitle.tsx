@@ -1,6 +1,5 @@
 "use client";
 
-import { zenOldMincho } from "@/app/fonts/fonts";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/all";
@@ -51,10 +50,10 @@ const PageTitle = () => {
   return (
     <div
       ref={workArchiveTitleRef}
-      className={`${zenOldMincho.className} relative flex h-screen w-full items-end overflow-hidden bg-[#fff6db]`}
+      className={`relative flex h-screen w-full items-end overflow-hidden bg-[#fff6db]`}
     >
       <div
-        className={`absolute mt-30 flex h-[calc(100vh-80px)] w-full flex-col justify-start gap-6 overflow-hidden text-center font-bold text-blue-400 uppercase xl:mt-0 xl:justify-end xl:gap-10`}
+        className={`absolute mt-30 flex h-[calc(100vh-80px)] w-full flex-col justify-center gap-6 overflow-hidden text-center font-bold text-blue-400 uppercase xl:mt-0 xl:justify-end xl:gap-8`}
       >
         {Array.from({ length: 7 }, (_, i) => (
           <div
@@ -75,7 +74,7 @@ const PageTitle = () => {
         ))}
       </div>
       <p
-        className={`archive-text absolute top-1/2 right-1/2 mb-12 translate-x-1/2 -translate-y-1/2 scale-y-200 text-8xl uppercase lg:text-9xl 2xl:top-auto 2xl:right-8 2xl:bottom-8 2xl:translate-0 2xl:text-[12rem]`}
+        className={`archive-text absolute top-1/2 right-1/2 mb-12 translate-x-1/2 -translate-y-1/2 scale-y-200 text-7xl uppercase lg:text-9xl 2xl:top-auto 2xl:right-8 2xl:bottom-8 2xl:translate-0 2xl:text-[12rem]`}
       >
         archive
       </p>
